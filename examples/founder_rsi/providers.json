@@ -1,0 +1,545 @@
+[
+  {
+    "id": "demo-launchpad",
+    "nameCn": null,
+    "nameEn": "Launchpad Accelerator (fictional)",
+    "location": {
+      "city": "Shenzhen",
+      "district": null
+    },
+    "website": null,
+    "currency": "USD",
+    "fundingProfile": {
+      "schema_version": "0.2.0",
+      "slug": "demo-launchpad",
+      "name": "Launchpad Accelerator (fictional)",
+      "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+      "entity_type": "program",
+      "categories": [
+        "accelerator",
+        "venture_capital"
+      ],
+      "policy_id": "accelerator",
+      "target_stages": [
+        "idea",
+        "prototype",
+        "pre_seed",
+        "seed"
+      ],
+      "provides_capital": true,
+      "capital_forms": [
+        "safe"
+      ],
+      "provides": [
+        "Mentorship",
+        "Founder network",
+        "Investor network",
+        "Fundraising support"
+      ],
+      "geographies": [
+        "Global"
+      ],
+      "industries": [
+        "AI",
+        "SaaS"
+      ],
+      "exclusions": [],
+      "ticket_usd": {
+        "min": 10000,
+        "max": 5000000
+      },
+      "company_requirements": {
+        "product": "not_required",
+        "traction": "not_required",
+        "revenue": "not_required",
+        "technical_team": "not_required",
+        "minimum_mrr_usd": 0
+      },
+      "evidence_required": [],
+      "terms": null,
+      "application": {
+        "method": null,
+        "url": null,
+        "deadline": null
+      },
+      "source_metadata": {
+        "status": "synthetic",
+        "verified_at": null,
+        "sources": [
+          {
+            "url": "https://example.invalid/deep-funding/demo-launchpad",
+            "accessed_at": "2026-09-05",
+            "claims": [
+              "mandate"
+            ]
+          }
+        ],
+        "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+      }
+    },
+    "requirements": [
+      {
+        "key": "team",
+        "status": "required",
+        "source": "Synthetic mandate only"
+      }
+    ],
+    "portfolio": [],
+    "lastVerifiedAt": null
+  },
+  {
+    "id": "demo-frontier",
+    "nameCn": null,
+    "nameEn": "Frontier Pre-seed (fictional)",
+    "location": {
+      "city": "Shenzhen",
+      "district": null
+    },
+    "website": null,
+    "currency": "USD",
+    "fundingProfile": {
+      "schema_version": "0.2.0",
+      "slug": "demo-frontier",
+      "name": "Frontier Pre-seed (fictional)",
+      "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+      "entity_type": "program",
+      "categories": [
+        "venture_capital"
+      ],
+      "policy_id": "vc_pre_seed",
+      "target_stages": [
+        "prototype",
+        "pre_seed"
+      ],
+      "provides_capital": true,
+      "capital_forms": [
+        "equity"
+      ],
+      "provides": [
+        "Technical expertise",
+        "GPU compute"
+      ],
+      "geographies": [
+        "Global"
+      ],
+      "industries": [
+        "AI",
+        "SaaS"
+      ],
+      "exclusions": [],
+      "ticket_usd": {
+        "min": 10000,
+        "max": 5000000
+      },
+      "company_requirements": {
+        "product": "not_required",
+        "traction": "not_required",
+        "revenue": "not_required",
+        "technical_team": "not_required",
+        "minimum_mrr_usd": 0
+      },
+      "evidence_required": [],
+      "terms": null,
+      "application": {
+        "method": null,
+        "url": null,
+        "deadline": null
+      },
+      "source_metadata": {
+        "status": "synthetic",
+        "verified_at": null,
+        "sources": [
+          {
+            "url": "https://example.invalid/deep-funding/demo-frontier",
+            "accessed_at": "2026-09-05",
+            "claims": [
+              "mandate"
+            ]
+          }
+        ],
+        "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+      }
+    },
+    "requirements": [
+      {
+        "key": "team",
+        "status": "required",
+        "source": "Synthetic mandate only"
+      }
+    ],
+    "portfolio": [
+      {
+        "id": "synthetic-01",
+        "name": "Fictional Company 1",
+        "sector": "Industrial",
+        "stage": "seed",
+        "snapshotDate": "2025-01-01",
+        "features": {
+          "revenue_usd": 50000,
+          "growth": 0.1,
+          "runway": 7,
+          "customers": 5,
+          "technical_experience": 2
+        },
+        "entryDate": "2025-01-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "exit",
+          "observedAt": "2026-08-01",
+          "multiple": 2.5,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-02",
+        "name": "Fictional Company 2",
+        "sector": "AI",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-02-01",
+        "features": {
+          "revenue_usd": 115000,
+          "growth": 0.2,
+          "runway": 8,
+          "customers": 11,
+          "technical_experience": 2.5
+        },
+        "entryDate": "2025-02-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "failed",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-03",
+        "name": "Fictional Company 3",
+        "sector": "AI",
+        "stage": "seed",
+        "snapshotDate": "2025-03-01",
+        "features": {
+          "revenue_usd": 180000,
+          "growth": null,
+          "runway": 9,
+          "customers": 17,
+          "technical_experience": 3
+        },
+        "entryDate": "2025-03-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "active",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-04",
+        "name": "Fictional Company 4",
+        "sector": "Industrial",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-04-01",
+        "features": {
+          "revenue_usd": 245000,
+          "growth": 0.4,
+          "runway": 10,
+          "customers": 23,
+          "technical_experience": 3.5
+        },
+        "entryDate": "2025-04-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "exit",
+          "observedAt": "2026-08-01",
+          "multiple": 2.5,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-05",
+        "name": "Fictional Company 5",
+        "sector": "AI",
+        "stage": "seed",
+        "snapshotDate": "2025-05-01",
+        "features": {
+          "revenue_usd": 310000,
+          "growth": 0.5,
+          "runway": 11,
+          "customers": 29,
+          "technical_experience": 4
+        },
+        "entryDate": "2025-05-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "failed",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-06",
+        "name": "Fictional Company 6",
+        "sector": "AI",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-06-01",
+        "features": {
+          "revenue_usd": 375000,
+          "growth": 0.6,
+          "runway": 12,
+          "customers": 35,
+          "technical_experience": 4.5
+        },
+        "entryDate": "2025-06-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "active",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-07",
+        "name": "Fictional Company 7",
+        "sector": "Industrial",
+        "stage": "seed",
+        "snapshotDate": "2025-07-01",
+        "features": {
+          "revenue_usd": 440000,
+          "growth": 0.7000000000000001,
+          "runway": 13,
+          "customers": 41,
+          "technical_experience": 5
+        },
+        "entryDate": "2025-07-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "exit",
+          "observedAt": "2026-08-01",
+          "multiple": 2.5,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-08",
+        "name": "Fictional Company 8",
+        "sector": "AI",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-08-01",
+        "features": {
+          "revenue_usd": 505000,
+          "growth": 0.8,
+          "runway": 14,
+          "customers": 47,
+          "technical_experience": 5.5
+        },
+        "entryDate": "2025-08-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "failed",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-09",
+        "name": "Fictional Company 9",
+        "sector": "AI",
+        "stage": "seed",
+        "snapshotDate": "2025-09-01",
+        "features": {
+          "revenue_usd": 570000,
+          "growth": 0.9,
+          "runway": 15,
+          "customers": 53,
+          "technical_experience": 6
+        },
+        "entryDate": "2025-09-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "active",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-10",
+        "name": "Fictional Company 10",
+        "sector": "Industrial",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-10-01",
+        "features": {
+          "revenue_usd": 635000,
+          "growth": 1,
+          "runway": 16,
+          "customers": 59,
+          "technical_experience": 6.5
+        },
+        "entryDate": "2025-10-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "exit",
+          "observedAt": "2026-08-01",
+          "multiple": 2.5,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-11",
+        "name": "Fictional Company 11",
+        "sector": "AI",
+        "stage": "seed",
+        "snapshotDate": "2025-11-01",
+        "features": {
+          "revenue_usd": 700000,
+          "growth": 1.1,
+          "runway": 17,
+          "customers": 65,
+          "technical_experience": 7
+        },
+        "entryDate": "2025-11-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "failed",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      },
+      {
+        "id": "synthetic-12",
+        "name": "Fictional Company 12",
+        "sector": "AI",
+        "stage": "pre_seed",
+        "snapshotDate": "2025-12-01",
+        "features": {
+          "revenue_usd": 765000,
+          "growth": 1.2000000000000002,
+          "runway": 18,
+          "customers": 71,
+          "technical_experience": 7.5
+        },
+        "entryDate": "2025-12-15",
+        "providerId": "demo-frontier",
+        "source": "Synthetic v0.2 regression fixture",
+        "provenance": "synthetic",
+        "outcome": {
+          "status": "active",
+          "observedAt": "2026-08-01",
+          "multiple": null,
+          "irr": null
+        }
+      }
+    ],
+    "lastVerifiedAt": null
+  },
+  {
+    "id": "demo-credit",
+    "nameCn": null,
+    "nameEn": "Cash-flow Credit Desk (fictional)",
+    "location": {
+      "city": "Shenzhen",
+      "district": null
+    },
+    "website": null,
+    "currency": "USD",
+    "fundingProfile": {
+      "schema_version": "0.2.0",
+      "slug": "demo-credit",
+      "name": "Cash-flow Credit Desk (fictional)",
+      "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+      "entity_type": "program",
+      "categories": [
+        "bank"
+      ],
+      "policy_id": "bank",
+      "target_stages": [
+        "growth",
+        "mature",
+        "buyout_ready"
+      ],
+      "provides_capital": true,
+      "capital_forms": [
+        "loan"
+      ],
+      "provides": [
+        "Regulatory support"
+      ],
+      "geographies": [
+        "Global"
+      ],
+      "industries": [
+        "AI",
+        "SaaS"
+      ],
+      "exclusions": [],
+      "ticket_usd": {
+        "min": 10000,
+        "max": 5000000
+      },
+      "company_requirements": {
+        "product": "required",
+        "traction": "required",
+        "revenue": "required",
+        "technical_team": "not_required",
+        "minimum_mrr_usd": 0
+      },
+      "evidence_required": [],
+      "terms": null,
+      "application": {
+        "method": null,
+        "url": null,
+        "deadline": null
+      },
+      "source_metadata": {
+        "status": "synthetic",
+        "verified_at": null,
+        "sources": [
+          {
+            "url": "https://example.invalid/deep-funding/demo-credit",
+            "accessed_at": "2026-09-05",
+            "claims": [
+              "mandate"
+            ]
+          }
+        ],
+        "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+      }
+    },
+    "requirements": [
+      {
+        "key": "team",
+        "status": "required",
+        "source": "Synthetic mandate only"
+      }
+    ],
+    "portfolio": [],
+    "lastVerifiedAt": null
+  }
+]

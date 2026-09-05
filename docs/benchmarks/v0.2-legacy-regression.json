@@ -1,0 +1,61 @@
+{
+  "measuredAt": "2026-09-05T08:50:08.668Z",
+  "engineVersion": "rules-2.0.0",
+  "runtime": "v24.18.0",
+  "platform": "win32",
+  "fixtureDate": "2026-09-05T12:00:00.000Z",
+  "iterations": 1000,
+  "matchingMs": {
+    "median": 0.02230000000000132,
+    "p95": 0.05960000000001742
+  },
+  "rows": [
+    {
+      "funder": "Meridian Seed Partners",
+      "score": 96.67,
+      "expected": "INTRODUCTION_READY",
+      "actual": "INTRODUCTION_READY",
+      "scoreOnlyBaseline": "INTRODUCTION_READY",
+      "correct": true
+    },
+    {
+      "funder": "Harbor Strategic Ventures",
+      "score": 93.33,
+      "expected": "INTRODUCTION_READY",
+      "actual": "INTRODUCTION_READY",
+      "scoreOnlyBaseline": "INTRODUCTION_READY",
+      "correct": true
+    },
+    {
+      "funder": "Atlas Growth Capital",
+      "score": 50,
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "scoreOnlyBaseline": "LOW_FIT",
+      "correct": true
+    },
+    {
+      "funder": "Northline Seed",
+      "score": 86.67,
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "scoreOnlyBaseline": "INTRODUCTION_READY",
+      "correct": true
+    },
+    {
+      "funder": "Firstlight Angels",
+      "score": 100,
+      "expected": "REQUEST_MORE_INFORMATION",
+      "actual": "REQUEST_MORE_INFORMATION",
+      "scoreOnlyBaseline": "INTRODUCTION_READY",
+      "correct": true
+    }
+  ],
+  "scoreOnlyFalseIntroductions": 2,
+  "engineFalseIntroductions": 0,
+  "tokenUse": {
+    "modelCalls": 0,
+    "llmTokens": 0
+  },
+  "limits": "Five synthetic mandate cases, not a real-world investment benchmark. Timing excludes D1, network and UI; includes random ID generation. No model is used."
+}

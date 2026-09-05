@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.2.0"
+    },
+    "slug": {
+      "type": "string",
+      "maxLength": 100,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 2000
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": [
+        "organization",
+        "person",
+        "program"
+      ]
+    },
+    "categories": {
+      "minItems": 1,
+      "maxItems": 16,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "incubator",
+          "accelerator",
+          "angel",
+          "venture_capital",
+          "corporate_vc",
+          "private_equity",
+          "strategic_investor",
+          "government_fund",
+          "industrial_fund",
+          "grant",
+          "subsidy",
+          "bank",
+          "venture_debt",
+          "family_office",
+          "crowdfunding",
+          "university_fund"
+        ]
+      }
+    },
+    "policy_id": {
+      "type": "string",
+      "enum": [
+        "incubator",
+        "accelerator",
+        "angel",
+        "vc_pre_seed",
+        "vc_seed",
+        "vc_growth",
+        "private_equity",
+        "bank",
+        "program",
+        "strategic"
+      ]
+    },
+    "target_stages": {
+      "anyOf": [
+        {
+          "maxItems": 11,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "idea",
+              "pre_company",
+              "prototype",
+              "pre_seed",
+              "seed",
+              "series_a",
+              "series_b",
+              "series_c_plus",
+              "growth",
+              "mature",
+              "buyout_ready"
+            ]
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provides_capital": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "capital_forms": {
+      "anyOf": [
+        {
+          "maxItems": 8,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "equity",
+              "safe",
+              "convertible_note",
+              "loan",
+              "credit_line",
+              "venture_debt",
+              "grant",
+              "subsidy"
+            ]
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provides": {
+      "maxItems": 15,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Enterprise distribution",
+          "Technical expertise",
+          "Recruiting",
+          "Overseas expansion",
+          "Manufacturing",
+          "Regulatory support",
+          "Office space",
+          "Cloud credits",
+          "GPU compute",
+          "Mentorship",
+          "Legal support",
+          "Founder network",
+          "Investor network",
+          "Fundraising support",
+          "Customer introductions"
+        ]
+      }
+    },
+    "geographies": {
+      "anyOf": [
+        {
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "industries": {
+      "anyOf": [
+        {
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exclusions": {
+      "anyOf": [
+        {
+          "maxItems": 30,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ticket_usd": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000
+            },
+            "max": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000000
+            }
+          },
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "company_requirements": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "enum": [
+            "required",
+            "preferred",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "traction": {
+          "type": "string",
+          "enum": [
+            "required",
+            "preferred",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "revenue": {
+          "type": "string",
+          "enum": [
+            "required",
+            "preferred",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "technical_team": {
+          "type": "string",
+          "enum": [
+            "required",
+            "preferred",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "minimum_mrr_usd": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "product",
+        "traction",
+        "revenue",
+        "technical_team",
+        "minimum_mrr_usd"
+      ],
+      "additionalProperties": false
+    },
+    "evidence_required": {
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "team",
+          "product",
+          "traction",
+          "financials"
+        ]
+      }
+    },
+    "terms": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "application": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deadline": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "method",
+        "url",
+        "deadline"
+      ],
+      "additionalProperties": false
+    },
+    "source_metadata": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "scaffold",
+            "provided",
+            "synthetic"
+          ]
+        },
+        "verified_at": {
+          "type": "null"
+        },
+        "sources": {
+          "maxItems": 20,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "accessed_at": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "claims": {
+                "minItems": 1,
+                "maxItems": 20,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                }
+              }
+            },
+            "required": [
+              "url",
+              "accessed_at",
+              "claims"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "status",
+        "verified_at",
+        "sources",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "slug",
+    "name",
+    "description",
+    "entity_type",
+    "categories",
+    "policy_id",
+    "target_stages",
+    "provides_capital",
+    "capital_forms",
+    "provides",
+    "geographies",
+    "industries",
+    "exclusions",
+    "ticket_usd",
+    "company_requirements",
+    "evidence_required",
+    "terms",
+    "application",
+    "source_metadata"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.0",
+  "slug": "demo-venture-debt",
+  "name": "Venture Debt Research Desk (fictional)",
+  "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+  "entity_type": "program",
+  "categories": ["venture_debt"],
+  "policy_id": "bank",
+  "target_stages": ["series_a", "growth"],
+  "provides_capital": true,
+  "capital_forms": ["venture_debt"],
+  "provides": ["Regulatory support"],
+  "geographies": ["Global"],
+  "industries": ["AI", "SaaS"],
+  "exclusions": [],
+  "ticket_usd": {
+    "min": 10000,
+    "max": 5000000
+  },
+  "company_requirements": {
+    "product": "required",
+    "traction": "required",
+    "revenue": "required",
+    "technical_team": "not_required",
+    "minimum_mrr_usd": 0
+  },
+  "evidence_required": [],
+  "terms": null,
+  "application": {
+    "method": null,
+    "url": null,
+    "deadline": null
+  },
+  "source_metadata": {
+    "status": "synthetic",
+    "verified_at": null,
+    "sources": [
+      {
+        "url": "https://example.invalid/deep-funding/demo-venture-debt",
+        "accessed_at": "2026-09-05",
+        "claims": ["mandate"]
+      }
+    ],
+    "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+  }
+}

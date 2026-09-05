@@ -55,7 +55,12 @@ import {
   type Handoff,
 } from "../../../packages/schemas";
 import "./style.css";
-import { compareMatches } from "../../../packages/matching";
+import { compareMatches, matchIsStale } from "../../../packages/matching";
+import { FundingExplorer } from "./funding-explorer";
+import { RsiWorkspace } from "./rsi-workspace";
+import { CompanyReadinessFields } from "./company-readiness-fields";
+import { fundingProfileOf } from "../../../packages/knowledge/adapter";
+import { stageOf } from "../../../packages/knowledge/readiness";
 
 type Workspace = {
   companies: Profile<Company>[];
@@ -201,12 +206,14 @@ function Header() {
       <Link to="/" className="brand">
         <Workflow size={25} />
         <span>
-          Deep Funding<span className="version"> / 0.1</span>
+          Deep Funding<span className="version"> / 0.2</span>
         </span>
       </Link>
       <nav aria-label="Main navigation">
         <NavLink to="/founder/dashboard">Company</NavLink>
         <NavLink to="/funding/dashboard">Capital</NavLink>
+        <NavLink to="/funding/explorer">Explorer</NavLink>
+        <NavLink to="/rsi">RSI</NavLink>
         <NavLink to="/about">Protocol</NavLink>
         <a
           className="github-link"
@@ -571,17 +578,22 @@ function Dashboard({ side }: { side: "founder" | "funding" }) {
                       <>
                         <b>{money(p.data.raiseUsd)}</b>
                         <span>
-                          {p.data.stage} / {p.data.sector}
+                          {stageOf(p.data) ?? "Unknown stage"} / {p.data.sector}
                         </span>
                       </>
                     ) : (
                       <>
                         <b>
-                          {money(p.data.ticketMinUsd)}–
-                          {money(p.data.ticketMaxUsd)}
+                          {fundingProfileOf(p.data).provides_capital === false
+                            ? "Resources only"
+                            : fundingProfileOf(p.data).ticket_usd
+                              ? `${money(fundingProfileOf(p.data).ticket_usd!.min)}–${money(fundingProfileOf(p.data).ticket_usd!.max)}`
+                              : "Unknown ticket"}
                         </b>
                         <span>
-                          {p.data.capitalType} / {p.data.stages.join(", ")}
+                          {fundingProfileOf(p.data).categories.join(" / ")} /{" "}
+                          {fundingProfileOf(p.data).target_stages?.join(", ") ||
+                            "Unknown stages"}
                         </span>
                       </>
                     )}
@@ -643,11 +655,10 @@ function latestMatches(matches: Match[]) {
   });
 }
 function isStale(m: Match, ws: Workspace) {
-  return (
-    ws.companies.find((c) => c.id === m.companyId)?.version !==
-      m.companyVersion ||
-    ws.funders.find((f) => f.id === m.funderId)?.version !== m.funderVersion ||
-    m.createdAt.slice(0, 10) !== new Date().toISOString().slice(0, 10)
+  return matchIsStale(
+    m,
+    ws.companies.find((c) => c.id === m.companyId)?.version,
+    ws.funders.find((f) => f.id === m.funderId)?.version,
   );
 }
 function Matches({ side }: { side: "founder" | "funding" }) {
@@ -994,7 +1005,7 @@ function Profiles({
                   <Field label="Monthly recurring revenue, USD">
                     {nullableNumber("mrrUsd")}
                   </Field>
-                  <Field label="Paying customers">
+                  <Field label="Customers / design partners">
                     {nullableNumber("customers")}
                   </Field>
                   <Field label="Team size">{input("teamSize", "number")}</Field>
@@ -1014,8 +1025,12 @@ function Profiles({
                     />
                   </Field>
                 </div>
+                <CompanyReadinessFields
+                  value={form}
+                  onChange={(patch) => setForm((f) => ({ ...f, ...patch }))}
+                />
                 <Chips
-                  title="Accepted capital types (hard constraint)"
+                  title="Legacy provider categories (unless explicit categories are set)"
                   options={capitalTypes}
                   value={form.capitalTypes}
                   onChange={(v) => set("capitalTypes", v)}
@@ -1028,6 +1043,48 @@ function Profiles({
                 />
               </section>
             </>
+          ) : form.fundingProfile ? (
+            <section>
+              <h2>
+                <span>02</span> Catalogue mandate
+              </h2>
+              <p>
+                Source status: {form.fundingProfile.source_metadata.status}.
+                Policy: {form.fundingProfile.policy_id}.
+              </p>
+              <dl className="catalogue-facts">
+                <div>
+                  <dt>Categories</dt>
+                  <dd>{form.fundingProfile.categories.join(" / ")}</dd>
+                </div>
+                <div>
+                  <dt>Capital</dt>
+                  <dd>
+                    {form.fundingProfile.provides_capital === false
+                      ? "Resources only"
+                      : form.fundingProfile.ticket_usd
+                        ? JSON.stringify(form.fundingProfile.ticket_usd)
+                        : "Unknown ticket"}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Stages</dt>
+                  <dd>
+                    {form.fundingProfile.target_stages?.join(", ") || "Unknown"}
+                  </dd>
+                </div>
+              </dl>
+              <details>
+                <summary>Canonical funding profile</summary>
+                <pre>{JSON.stringify(form.fundingProfile, null, 2)}</pre>
+              </details>
+              <Link
+                to={`/funding/explorer?entity=${form.fundingProfile.slug}`}
+                className="text-button"
+              >
+                Source profile <ArrowUpRight size={16} />
+              </Link>
+            </section>
           ) : (
             <section>
               <h2>
@@ -1081,7 +1138,7 @@ function Profiles({
                 <label>
                   <input
                     type="checkbox"
-                    checked={form.requiresProduct}
+                    checked={form.requiresProduct ?? false}
                     onChange={(e) => set("requiresProduct", e.target.checked)}
                   />{" "}
                   Working product required
@@ -1089,7 +1146,7 @@ function Profiles({
                 <label>
                   <input
                     type="checkbox"
-                    checked={form.requiresTechnicalTeam}
+                    checked={form.requiresTechnicalTeam ?? false}
                     onChange={(e) =>
                       set("requiresTechnicalTeam", e.target.checked)
                     }
@@ -1125,7 +1182,7 @@ function Profiles({
                           onChange={(e) => change("field", e.target.value)}
                         >
                           {(side === "founder"
-                            ? ["product", "traction", "team"]
+                            ? ["product", "traction", "team", "financials"]
                             : ["mandate"]
                           ).map((f) => (
                             <option key={f}>{f}</option>
@@ -1701,10 +1758,10 @@ function About() {
           more information.
         </p>
         <p>
-          The versioned demo policy weights stage 25, sector 20, ticket 15,
-          geography 10, traction 10, team 10 and strategic coverage 10.
-          Review-ready requires at least 75/100, no failures and no gaps. This
-          is a configurable engineering policy, not a prediction, financial
+          The seed-VC baseline weights stage 25, sector 20, ticket 15, geography
+          10, traction 10, team 10 and strategic coverage 10. Review-ready
+          requires at least 75/100, no failures and no gaps. This is a
+          configurable engineering policy, not a prediction, financial
           recommendation or industry standard.
         </p>
         <p>
@@ -1757,7 +1814,12 @@ function About() {
 }
 function App() {
   const location = useLocation();
-  const { error, busy } = useApp();
+  const navigate = useNavigate();
+  const { error, busy, ws, init, refresh } = useApp();
+  useEffect(() => {
+    if (location.pathname === "/funding/explorer" && !ws)
+      void refresh().catch(() => undefined);
+  }, [location.pathname, ws]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -1782,6 +1844,24 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
+          <Route path="/rsi" element={<RsiWorkspace />} />
+          <Route
+            path="/funding/explorer"
+            element={
+              <FundingExplorer
+                companies={ws?.companies || []}
+                onImport={async (slug) => {
+                  await init();
+                  const p = await api<Profile<Funder>>(
+                    `/funding-catalogue/${slug}/import`,
+                    "POST",
+                  );
+                  await refresh();
+                  navigate(`/funding/profile?edit=${p.id}`);
+                }}
+              />
+            }
+          />
           {(["founder", "funding"] as const).flatMap((side) => [
             <Route
               key={`${side}-d`}

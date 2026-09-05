@@ -1,11 +1,21 @@
 {
   "name": "deep-funding",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "deepfunding": "bin/deepfunding.mjs"
+  },
   "scripts": {
+    "cli": "node bin/deepfunding.mjs",
+    "examples:generate": "tsx scripts/rsi-examples.ts",
+    "examples:check": "tsx scripts/rsi-examples.ts --check",
     "start": "npm run db:local && npm run build && npm run dev",
     "benchmark": "tsx scripts/benchmark.ts",
+    "benchmark:taxonomy": "tsx scripts/taxonomy-benchmark.ts",
+    "benchmark:rsi": "tsx scripts/rsi-benchmark.ts",
+    "schema:generate": "tsx scripts/funding-schema.ts",
+    "schema:check": "tsx scripts/funding-schema.ts --check",
     "format": "prettier --write apps packages tests scripts data docs *.md *.ts *.json .github/workflows/*.yml",
     "dev": "wrangler dev --port 8791",
     "dev:web": "vite --host 127.0.0.1 --port 5191",
@@ -17,9 +27,10 @@
     "db:local": "wrangler d1 migrations apply deep-funding --local",
     "db:remote": "wrangler d1 migrations apply deep-funding --remote",
     "deploy": "npm run build && wrangler deploy",
-    "check": "npm run types && npm run typecheck && npm test && npm run build"
+    "check": "npm run schema:check && npm run examples:check && npm run types && npm run typecheck && npm test && npm run build"
   },
   "dependencies": {
+    "commander": "^14.0.0",
     "lucide-react": "^0.468.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

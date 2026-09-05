@@ -1,0 +1,1317 @@
+{
+  "measuredAt": "2026-09-05T09:36:58.260Z",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "protocol": "Fixed synthetic entry-date split: first 8 train, last 4 held out. No candidate ID in training. Both use fixed bounds; baseline equal weights, change explicit user weights. No tuning against this holdout.",
+  "trainIds": [
+    "synthetic-01",
+    "synthetic-02",
+    "synthetic-03",
+    "synthetic-04",
+    "synthetic-05",
+    "synthetic-06",
+    "synthetic-07",
+    "synthetic-08"
+  ],
+  "heldoutIds": [
+    "synthetic-09",
+    "synthetic-10",
+    "synthetic-11",
+    "synthetic-12"
+  ],
+  "results": [
+    {
+      "id": "synthetic-09",
+      "baseline": {
+        "id": "synthetic-09",
+        "name": "Fictional Company 9",
+        "score": 57.7,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 570000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.57,
+            "points": 11.399999999999999,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 0.9,
+            "unit": "fraction/year",
+            "weight": 20,
+            "normalized": 0.5599999999999999,
+            "points": 11.2,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 15,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.625,
+            "points": 12.5,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 53,
+            "unit": "count",
+            "weight": 20,
+            "normalized": 0.53,
+            "points": 10.600000000000001,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 6,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.6,
+            "points": 12,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-6a002a87",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 8,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 34.6,
+        "percentile": 100,
+        "delta": 23.1,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.948667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.897333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.846,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.794667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.743333,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      },
+      "changed": {
+        "id": "synthetic-09",
+        "name": "Fictional Company 9",
+        "score": 57.85,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 570000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.57,
+            "points": 11.399999999999999,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 0.9,
+            "unit": "fraction/year",
+            "weight": 25,
+            "normalized": 0.5599999999999999,
+            "points": 13.999999999999998,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 15,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.625,
+            "points": 12.5,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 53,
+            "unit": "count",
+            "weight": 15,
+            "normalized": 0.53,
+            "points": 7.95,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 6,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.6,
+            "points": 12,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-36b7fc72",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 7,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 37.716667,
+        "percentile": 100,
+        "delta": 20.133333,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.949667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.899333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.849,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.798667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.748333,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      }
+    },
+    {
+      "id": "synthetic-10",
+      "baseline": {
+        "id": "synthetic-10",
+        "name": "Fictional Company 10",
+        "score": 62.833333,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 635000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.635,
+            "points": 12.7,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1,
+            "unit": "fraction/year",
+            "weight": 20,
+            "normalized": 0.6,
+            "points": 12,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 16,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.6666666666666666,
+            "points": 13.333333333333332,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 59,
+            "unit": "count",
+            "weight": 20,
+            "normalized": 0.59,
+            "points": 11.799999999999999,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 6.5,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.65,
+            "points": 13,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-6a002a87",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 8,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 34.6,
+        "percentile": 100,
+        "delta": 28.233333,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.897333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.846,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.794667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.743333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.692,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      },
+      "changed": {
+        "id": "synthetic-10",
+        "name": "Fictional Company 10",
+        "score": 62.883333,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 635000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.635,
+            "points": 12.7,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1,
+            "unit": "fraction/year",
+            "weight": 25,
+            "normalized": 0.6,
+            "points": 15,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 16,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.6666666666666666,
+            "points": 13.333333333333332,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 59,
+            "unit": "count",
+            "weight": 15,
+            "normalized": 0.59,
+            "points": 8.85,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 6.5,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.65,
+            "points": 13,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-36b7fc72",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 7,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 37.716667,
+        "percentile": 100,
+        "delta": 25.166666,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.899333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.849,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.798667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.748333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.698,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      }
+    },
+    {
+      "id": "synthetic-11",
+      "baseline": {
+        "id": "synthetic-11",
+        "name": "Fictional Company 11",
+        "score": 67.966667,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 700000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.7,
+            "points": 14,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1.1,
+            "unit": "fraction/year",
+            "weight": 20,
+            "normalized": 0.64,
+            "points": 12.8,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 17,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.7083333333333334,
+            "points": 14.166666666666668,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 65,
+            "unit": "count",
+            "weight": 20,
+            "normalized": 0.65,
+            "points": 13,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 7,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.7,
+            "points": 14,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-6a002a87",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 8,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 34.6,
+        "percentile": 100,
+        "delta": 33.366667,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.846,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.794667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.743333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.692,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.640667,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      },
+      "changed": {
+        "id": "synthetic-11",
+        "name": "Fictional Company 11",
+        "score": 67.916667,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 700000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.7,
+            "points": 14,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1.1,
+            "unit": "fraction/year",
+            "weight": 25,
+            "normalized": 0.64,
+            "points": 16,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 17,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.7083333333333334,
+            "points": 14.166666666666668,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 65,
+            "unit": "count",
+            "weight": 15,
+            "normalized": 0.65,
+            "points": 9.75,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 7,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.7,
+            "points": 14,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-36b7fc72",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 7,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 37.716667,
+        "percentile": 100,
+        "delta": 30.2,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.849,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.798667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.748333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.698,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.647667,
+            "coverage": 1
+          }
+        ],
+        "strengths": [],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      }
+    },
+    {
+      "id": "synthetic-12",
+      "baseline": {
+        "id": "synthetic-12",
+        "name": "Fictional Company 12",
+        "score": 73.1,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 765000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.765,
+            "points": 15.3,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1.2000000000000002,
+            "unit": "fraction/year",
+            "weight": 20,
+            "normalized": 0.68,
+            "points": 13.600000000000001,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 18,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.75,
+            "points": 15,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 71,
+            "unit": "count",
+            "weight": 20,
+            "normalized": 0.71,
+            "points": 14.2,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 7.5,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.75,
+            "points": 15,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-6a002a87",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 8,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 34.6,
+        "percentile": 100,
+        "delta": 38.5,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.794667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.743333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.692,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.640667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.589333,
+            "coverage": 1
+          }
+        ],
+        "strengths": ["revenue_usd", "runway", "technical_experience"],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      },
+      "changed": {
+        "id": "synthetic-12",
+        "name": "Fictional Company 12",
+        "score": 72.95,
+        "coverage": 1,
+        "comparable": true,
+        "components": [
+          {
+            "key": "revenue_usd",
+            "label": "Annual revenue",
+            "value": 765000,
+            "unit": "USD/year",
+            "weight": 20,
+            "normalized": 0.765,
+            "points": 15.3,
+            "reason": "higher is favored within fixed bounds [0, 1000000]"
+          },
+          {
+            "key": "growth",
+            "label": "Revenue growth",
+            "value": 1.2000000000000002,
+            "unit": "fraction/year",
+            "weight": 25,
+            "normalized": 0.68,
+            "points": 17,
+            "reason": "higher is favored within fixed bounds [-0.5, 2]"
+          },
+          {
+            "key": "runway",
+            "label": "Cash runway",
+            "value": 18,
+            "unit": "months",
+            "weight": 20,
+            "normalized": 0.75,
+            "points": 15,
+            "reason": "higher is favored within fixed bounds [0, 24]"
+          },
+          {
+            "key": "customers",
+            "label": "Paying customers",
+            "value": 71,
+            "unit": "count",
+            "weight": 15,
+            "normalized": 0.71,
+            "points": 10.649999999999999,
+            "reason": "higher is favored within fixed bounds [0, 100]"
+          },
+          {
+            "key": "technical_experience",
+            "label": "Domain engineering experience",
+            "value": 7.5,
+            "unit": "years",
+            "weight": 20,
+            "normalized": 0.75,
+            "points": 15,
+            "reason": "higher is favored within fixed bounds [0, 10]"
+          }
+        ],
+        "missing": [],
+        "benchmarkVersion": "rsi-rules-0.2.0-36b7fc72",
+        "asOf": "2026-09-05",
+        "mode": "historical_median",
+        "cohortSize": 8,
+        "comparableSamples": 7,
+        "cohortIds": [
+          "synthetic-01",
+          "synthetic-02",
+          "synthetic-03",
+          "synthetic-04",
+          "synthetic-05",
+          "synthetic-06",
+          "synthetic-07",
+          "synthetic-08"
+        ],
+        "threshold": 37.716667,
+        "percentile": 100,
+        "delta": 35.233333,
+        "status": "COMPARABLE",
+        "neighbors": [
+          {
+            "id": "synthetic-08",
+            "name": "Fictional Company 8",
+            "similarity": 0.798667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-07",
+            "name": "Fictional Company 7",
+            "similarity": 0.748333,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-06",
+            "name": "Fictional Company 6",
+            "similarity": 0.698,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-05",
+            "name": "Fictional Company 5",
+            "similarity": 0.647667,
+            "coverage": 1
+          },
+          {
+            "id": "synthetic-04",
+            "name": "Fictional Company 4",
+            "similarity": 0.597333,
+            "coverage": 1
+          }
+        ],
+        "strengths": ["revenue_usd", "runway", "technical_experience"],
+        "weaknesses": [],
+        "warnings": [
+          "Descriptive cohort comparison, not a funding probability or investment decision.",
+          "Historical portfolio is selected, not a representative opportunity set; selection and survivorship bias remain.",
+          "Cohort contains synthetic records."
+        ]
+      }
+    }
+  ],
+  "founder": {
+    "schemaVersion": "0.2.0",
+    "engineVersion": "rsi-rules-0.2.0",
+    "asOf": "2026-09-05",
+    "version": "rsi-rules-0.2.0-founder-47ca6801",
+    "results": [
+      {
+        "providerId": "demo-frontier",
+        "name": "Frontier Pre-seed (fictional)",
+        "policyId": "vc_pre_seed",
+        "score": 84.33,
+        "components": [
+          {
+            "name": "mandate_fit",
+            "weight": 85,
+            "value": 0.9333,
+            "points": 79.3305
+          },
+          {
+            "name": "interaction_signal",
+            "weight": 10,
+            "value": 0.5,
+            "points": 5
+          },
+          {
+            "name": "portfolio_similarity",
+            "weight": 5,
+            "value": null,
+            "points": 0
+          }
+        ],
+        "coverage": 0.95,
+        "decision": "INTRODUCTION_READY",
+        "recommendation": "HUMAN_REVIEW",
+        "hardFailures": [],
+        "gaps": [],
+        "mandateComponents": [
+          {
+            "name": "Stage",
+            "weight": 20,
+            "value": 1,
+            "points": 20,
+            "reason": "pre_seed; targets: prototype, pre_seed. Financing history is separate.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Sector",
+            "weight": 15,
+            "value": 1,
+            "points": 15,
+            "reason": "Preferred sector: AI; exclusions remain binding.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Ticket",
+            "weight": 10,
+            "value": 1,
+            "points": 10,
+            "reason": "Single-provider cash request USD 300000; not syndicate funding.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Geography",
+            "weight": 5,
+            "value": 1,
+            "points": 5,
+            "reason": "Greater China; legal and program eligibility are not inferred.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Team",
+            "weight": 25,
+            "value": 1,
+            "points": 25,
+            "reason": "Documented team; seed-demo policy additionally scores technical capability. No founder-quality inference.",
+            "evidenceRefs": ["company:team-01"]
+          },
+          {
+            "name": "Product",
+            "weight": 15,
+            "value": 1,
+            "points": 15,
+            "reason": "Working product with current evidence; a missing product is not a universal rejection.",
+            "evidenceRefs": ["company:product-01"]
+          },
+          {
+            "name": "Strategic",
+            "weight": 10,
+            "value": 0.3333333333333333,
+            "points": 3.33,
+            "reason": "33% of requested resources covered; no needs specified earns zero.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          }
+        ],
+        "history": {
+          "samples": 1,
+          "eventIds": ["history-1"],
+          "value": 0.5,
+          "explanation": "Latest event per opportunity at cutoff; stage signal with two pseudo-observations. Descriptive, not response probability."
+        },
+        "portfolioSamples": 0,
+        "synthetic": true,
+        "warnings": [
+          "Provided claims are not independently verified. Audit is not legal or financial certification.",
+          "Source claims and policy scores are not independently verified. Terms and authority require human review.",
+          "Fictional fixture; no real investment opportunity.",
+          "Policy scores are not calibrated across funding categories and are not funding probabilities."
+        ],
+        "nextAction": "Human review of fit and claims, then record an introduction request. No contact is automatic."
+      },
+      {
+        "providerId": "demo-launchpad",
+        "name": "Launchpad Accelerator (fictional)",
+        "policyId": "accelerator",
+        "score": 75.08,
+        "components": [
+          {
+            "name": "mandate_fit",
+            "weight": 85,
+            "value": 0.8833,
+            "points": 75.0805
+          },
+          {
+            "name": "interaction_signal",
+            "weight": 10,
+            "value": null,
+            "points": 0
+          },
+          {
+            "name": "portfolio_similarity",
+            "weight": 5,
+            "value": null,
+            "points": 0
+          }
+        ],
+        "coverage": 0.85,
+        "decision": "INTRODUCTION_READY",
+        "recommendation": "HUMAN_REVIEW",
+        "hardFailures": [],
+        "gaps": [],
+        "mandateComponents": [
+          {
+            "name": "Stage",
+            "weight": 15,
+            "value": 1,
+            "points": 15,
+            "reason": "pre_seed; targets: idea, prototype, pre_seed, seed. Financing history is separate.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Sector",
+            "weight": 5,
+            "value": 1,
+            "points": 5,
+            "reason": "Preferred sector: AI; exclusions remain binding.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Geography",
+            "weight": 10,
+            "value": 1,
+            "points": 10,
+            "reason": "Greater China; legal and program eligibility are not inferred.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Team",
+            "weight": 25,
+            "value": 1,
+            "points": 25,
+            "reason": "Documented team; seed-demo policy additionally scores technical capability. No founder-quality inference.",
+            "evidenceRefs": ["company:team-01"]
+          },
+          {
+            "name": "Product",
+            "weight": 15,
+            "value": 1,
+            "points": 15,
+            "reason": "Working product with current evidence; a missing product is not a universal rejection.",
+            "evidenceRefs": ["company:product-01"]
+          },
+          {
+            "name": "Traction",
+            "weight": 10,
+            "value": 0.5,
+            "points": 5,
+            "reason": "Reported customer validation and positive MRR, supported by current shared evidence. Not growth or retention measurement.",
+            "evidenceRefs": ["company:traction-01"]
+          },
+          {
+            "name": "Strategic",
+            "weight": 20,
+            "value": 0.6666666666666666,
+            "points": 13.33,
+            "reason": "67% of requested resources covered; no needs specified earns zero.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          }
+        ],
+        "history": {
+          "samples": 0,
+          "eventIds": [],
+          "value": null,
+          "explanation": "Latest event per opportunity at cutoff; stage signal with two pseudo-observations. Descriptive, not response probability."
+        },
+        "portfolioSamples": 0,
+        "synthetic": true,
+        "warnings": [
+          "Provided claims are not independently verified. Audit is not legal or financial certification.",
+          "Source claims and policy scores are not independently verified. Terms and authority require human review.",
+          "Fictional fixture; no real investment opportunity.",
+          "Policy scores are not calibrated across funding categories and are not funding probabilities."
+        ],
+        "nextAction": "Human review of fit and claims, then record an introduction request. No contact is automatic."
+      },
+      {
+        "providerId": "demo-credit",
+        "name": "Cash-flow Credit Desk (fictional)",
+        "policyId": "bank",
+        "score": 21.25,
+        "components": [
+          {
+            "name": "mandate_fit",
+            "weight": 85,
+            "value": 0.25,
+            "points": 21.25
+          },
+          {
+            "name": "interaction_signal",
+            "weight": 10,
+            "value": null,
+            "points": 0
+          },
+          {
+            "name": "portfolio_similarity",
+            "weight": 5,
+            "value": null,
+            "points": 0
+          }
+        ],
+        "coverage": 0.85,
+        "decision": "REJECTED",
+        "recommendation": "DO_NOT_PRIORITIZE",
+        "hardFailures": [
+          "Stage: pre_seed is outside growth / mature / buyout_ready.",
+          "Required revenue is not reported."
+        ],
+        "gaps": [
+          "Current, shared financials evidence is missing (180-day policy).",
+          "Financial statements, annual revenue, operating cash flow and debt need current shared evidence.",
+          "Repayment source and positive cash flow covering reported debt service are unresolved; proposed loan terms still require underwriting."
+        ],
+        "mandateComponents": [
+          {
+            "name": "Stage",
+            "weight": 5,
+            "value": 0,
+            "points": 0,
+            "reason": "pre_seed; targets: growth, mature, buyout_ready. Financing history is separate.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Sector",
+            "weight": 5,
+            "value": 1,
+            "points": 5,
+            "reason": "Preferred sector: AI; exclusions remain binding.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Ticket",
+            "weight": 15,
+            "value": 1,
+            "points": 15,
+            "reason": "Single-provider cash request USD 300000; not syndicate funding.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Geography",
+            "weight": 5,
+            "value": 1,
+            "points": 5,
+            "reason": "Greater China; legal and program eligibility are not inferred.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Financials",
+            "weight": 30,
+            "value": 0,
+            "points": 0,
+            "reason": "Financial disclosure completeness, not an audited valuation or an assessment of financial quality.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          },
+          {
+            "name": "Repayment",
+            "weight": 40,
+            "value": 0,
+            "points": 0,
+            "reason": "Positive reported operating cash flow covers reported annual debt service; proposed terms and collateral still require human underwriting.",
+            "evidenceRefs": ["funder:catalogue-source-0"]
+          }
+        ],
+        "history": {
+          "samples": 0,
+          "eventIds": [],
+          "value": null,
+          "explanation": "Latest event per opportunity at cutoff; stage signal with two pseudo-observations. Descriptive, not response probability."
+        },
+        "portfolioSamples": 0,
+        "synthetic": true,
+        "warnings": [
+          "Provided claims are not independently verified. Audit is not legal or financial certification.",
+          "Source claims and policy scores are not independently verified. Terms and authority require human review.",
+          "Fictional fixture; no real investment opportunity.",
+          "Policy scores are not calibrated across funding categories and are not funding probabilities."
+        ],
+        "nextAction": "Resolve the mandate mismatch or choose another counterparty."
+      }
+    ],
+    "warnings": [
+      "Ranking is an internal heuristic, not a likelihood of funding; cross-policy scores are not calibrated.",
+      "Unknown history or portfolio contributes zero without weight redistribution. Coverage must be reviewed.",
+      "History can reproduce outreach and selection bias. Hard mandate failures cannot be overturned by historical similarity.",
+      "No contacts, applications or investment actions are sent."
+    ]
+  },
+  "timing": {
+    "samples": 1000,
+    "medianMs": 0.02145,
+    "p95Ms": 0.051975,
+    "scope": "Warm in-process compare only; excludes fit, I/O, network, browser"
+  },
+  "modelCalls": 0,
+  "runtimeModelTokens": 0,
+  "developmentTokens": "UNMEASURED",
+  "result": "Pipeline and versioned diagnostic comparisons only; no predictive quality improvement established.",
+  "realFundingAccuracy": "UNMEASURED",
+  "investmentReturns": "UNMEASURED"
+}

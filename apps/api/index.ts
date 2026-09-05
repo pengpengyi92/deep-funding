@@ -11,9 +11,28 @@ import {
   type Handoff,
 } from "../../packages/schemas";
 import { demo } from "../../data/demo";
-import { evaluate, compareMatches } from "../../packages/matching";
-import { companyAgents, fundingAgents } from "../../packages/agents";
+import {
+  evaluate,
+  compareMatches,
+  matchIsStale,
+} from "../../packages/matching";
+import {
+  companyAgents,
+  fundingAgents,
+  ENGINE_VERSION,
+} from "../../packages/agents";
 import { createRun, emit } from "../../packages/a2a";
+import { fundingCatalogue } from "../../packages/knowledge/catalogue";
+import {
+  categoryGroups,
+  companyStages,
+  resourceTypes,
+  capitalForms,
+  taxonomyVersion,
+} from "../../packages/knowledge/taxonomy";
+import { fundingProfileShape } from "../../packages/knowledge/profile-schema";
+import { catalogueFunder } from "../../packages/knowledge/adapter";
+import { taxonomyCompanies } from "../../data/taxonomy-demo";
 
 class HttpError extends Error {
   constructor(
@@ -180,13 +199,80 @@ async function api(request: Request, env: Env): Promise<Response> {
   if (path === "/api/health" && method === "GET")
     return json({
       status: "ok",
-      version: "0.1.0",
+      version: "0.2.0",
+      engineVersion: ENGINE_VERSION,
       engine: "deterministic",
       outboundIntroductions: false,
     });
   if (!["GET", "POST", "PUT", "DELETE"].includes(method))
     throw new HttpError(405, "Method not allowed.");
   if (method !== "GET") checkOrigin(request);
+  if (path === "/api/funding-catalogue" && method === "GET")
+    return json({
+      version: taxonomyVersion,
+      groups: categoryGroups,
+      stages: companyStages,
+      resources: resourceTypes,
+      capitalForms,
+      profiles: fundingCatalogue,
+      examples: taxonomyCompanies(),
+    });
+  if (path === "/api/funding-schema" && method === "GET")
+    return json(z.toJSONSchema(fundingProfileShape));
+  const catalogueRoute = path.match(
+    /^\/api\/funding-catalogue\/([a-z0-9-]+)(?:\/(preview|import))?$/,
+  );
+  if (catalogueRoute && method === "GET" && !catalogueRoute[2]) {
+    const entry = fundingCatalogue.find((p) => p.slug === catalogueRoute[1]);
+    if (!entry) throw new HttpError(404, "Funding profile not found.");
+    return json(entry);
+  }
+  if (catalogueRoute && method === "POST" && catalogueRoute[2] === "preview") {
+    const entry = fundingCatalogue.find((p) => p.slug === catalogueRoute[1]);
+    if (!entry) throw new HttpError(404, "Funding profile not found.");
+    const input = await body(
+      request,
+      z
+        .object({
+          exampleId: z.string().max(100).optional(),
+          companyId: z.string().max(100).optional(),
+        })
+        .strict()
+        .refine(
+          (p) => Number(!!p.exampleId) + Number(!!p.companyId) === 1,
+          "Choose exactly one company",
+        ),
+    );
+    const now = new Date();
+    const company = input.exampleId
+      ? taxonomyCompanies(now).find((c) => c.id === input.exampleId)
+      : ((await profile(
+          env,
+          await owner(request, env),
+          input.companyId!,
+          "company",
+        )) as Profile<Company>);
+    if (!company) throw new HttpError(404, "Company not found.");
+    if (!company.data.shareForMatching)
+      throw new HttpError(409, "Enable company sharing before a preview.");
+    const result = evaluate(
+      company,
+      {
+        id: entry.slug,
+        kind: "funder",
+        version: 1,
+        updatedAt: now.toISOString(),
+        data: catalogueFunder(entry),
+      },
+      now,
+    );
+    return json({
+      ...result,
+      preview: true,
+      persisted: false,
+      handoffAllowed: false,
+    });
+  }
   if (path === "/api/workspace" && method === "POST") {
     try {
       await owner(request, env);
@@ -227,6 +313,24 @@ async function api(request: Request, env: Env): Promise<Response> {
     return response;
   }
   const user = await owner(request, env);
+  if (catalogueRoute && method === "POST" && catalogueRoute[2] === "import") {
+    const entry = fundingCatalogue.find((p) => p.slug === catalogueRoute[1]);
+    if (!entry) throw new HttpError(404, "Funding profile not found.");
+    const existing = (await profiles(env, user, "funder")).find(
+      (p) => (p.data as Funder).fundingProfile?.slug === entry.slug,
+    );
+    if (existing) return json(existing);
+    await capacity(env, user, "profiles", 20);
+    const id = crypto.randomUUID(),
+      now = new Date().toISOString();
+    const data = funderSchema.parse(catalogueFunder(entry));
+    await env.DB.prepare(
+      "INSERT INTO profiles(id,owner,kind,version,data,updated_at) VALUES(?,?,?,1,?,?)",
+    )
+      .bind(id, user, "funder", JSON.stringify(data), now)
+      .run();
+    return json(await profile(env, user, id, "funder"), 201);
+  }
   if (path === "/api/workspace" && method === "DELETE") {
     await env.DB.prepare("DELETE FROM workspaces WHERE id=?").bind(user).run();
     const response = json({ deleted: true });
@@ -369,7 +473,7 @@ async function api(request: Request, env: Env): Promise<Response> {
         kind === "company"
           ? action === "audit"
             ? companyAgents.audit(p.data as Company, now)
-            : companyAgents.analysis(p.data as Company)
+            : companyAgents.analysis(p.data as Company, now)
           : action === "audit"
             ? fundingAgents.audit(p.data as Funder, now)
             : fundingAgents.analysis(p.data as Funder);
@@ -394,11 +498,7 @@ async function api(request: Request, env: Env): Promise<Response> {
     const m = await stored<Match>(env, user, id, "matches");
     const c = await profile(env, user, m.companyId),
       f = await profile(env, user, m.funderId);
-    const stale =
-      c.version !== m.companyVersion ||
-      f.version !== m.funderVersion ||
-      new Date(m.createdAt).toISOString().slice(0, 10) !==
-        new Date().toISOString().slice(0, 10);
+    const stale = matchIsStale(m, c.version, f.version);
     const existing = (
       await env.DB.prepare(
         "SELECT data FROM requests WHERE owner=? AND match_id=?",

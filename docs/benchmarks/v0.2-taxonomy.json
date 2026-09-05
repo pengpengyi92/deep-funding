@@ -1,0 +1,958 @@
+{
+  "engineVersion": "rules-2.0.0",
+  "measuredAt": "2026-09-05T08:49:34.438Z",
+  "fixtureDate": "2026-09-05T12:00:00.000Z",
+  "runtime": "v24.18.0",
+  "platform": "win32",
+  "iterations": 1000,
+  "rows": [
+    {
+      "company": "idea-founder",
+      "entity": "demo-workshop",
+      "policy": "incubator",
+      "score": 90,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 75,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-launchpad",
+      "policy": "accelerator",
+      "score": 65,
+      "decision": "LOW_FIT",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 70,
+        "decision": "LOW_FIT"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-operator",
+      "policy": "angel",
+      "score": 65,
+      "decision": "LOW_FIT",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 70,
+        "decision": "LOW_FIT"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-frontier",
+      "policy": "vc_pre_seed",
+      "score": 45,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: idea is outside prototype / pre_seed.",
+        "No requested non-capital resource is provided."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-seed",
+      "policy": "vc_seed",
+      "score": 40,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared product evidence is missing (180-day policy).",
+        "Current, shared traction evidence is missing (180-day policy)."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside seed / series_a.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-growth",
+      "policy": "vc_growth",
+      "score": 25,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared traction evidence is missing (180-day policy).",
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Current, shared product evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside growth / series_c_plus.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported.",
+        "Default growth/buyout policy does not underwrite a pre-revenue company; special situations require a separate policy."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-pe",
+      "policy": "private_equity",
+      "score": 25,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Current, shared product evidence is missing (180-day policy).",
+        "Current, shared traction evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside growth / mature / buyout_ready.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported.",
+        "Default growth/buyout policy does not underwrite a pre-revenue company; special situations require a separate policy."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-credit",
+      "policy": "bank",
+      "score": 10,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Current, shared product evidence is missing (180-day policy).",
+        "Current, shared traction evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence.",
+        "Repayment source and positive cash flow covering reported debt service are unresolved; proposed loan terms still require underwriting."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside growth / mature / buyout_ready.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-strategic",
+      "policy": "strategic",
+      "score": 40,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared product evidence is missing (180-day policy).",
+        "Current, shared traction evidence is missing (180-day policy)."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside seed / series_a / growth.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-university",
+      "policy": "program",
+      "score": 95,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 75,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-policy",
+      "policy": "program",
+      "score": 55,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: idea is outside prototype / seed / growth.",
+        "No requested non-capital resource is provided."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-venture-debt",
+      "policy": "bank",
+      "score": 10,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Current, shared product evidence is missing (180-day policy).",
+        "Current, shared traction evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence.",
+        "Repayment source and positive cash flow covering reported debt service are unresolved; proposed loan terms still require underwriting."
+      ],
+      "hardFailures": [
+        "Stage: idea is outside series_a / growth.",
+        "No requested non-capital resource is provided.",
+        "Required product is not reported.",
+        "Required traction is not reported.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-family",
+      "policy": "program",
+      "score": 55,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: idea is outside seed / growth / mature.",
+        "No requested non-capital resource is provided."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "demo-platform",
+      "policy": "program",
+      "score": 55,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: idea is outside prototype / seed.",
+        "No requested non-capital resource is provided."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 40,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "idea-founder",
+      "entity": "y-combinator",
+      "policy": "accelerator",
+      "score": 45,
+      "decision": "REQUEST_MORE_INFORMATION",
+      "gaps": [
+        "Stage or target stages are unknown.",
+        "Provider exclusions are unknown.",
+        "Provider technical_team requirement is unknown.",
+        "Catalogue scaffold is incomplete and cannot authorize an introduction.",
+        "Current, sourced mandate evidence is missing."
+      ],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 25,
+        "decision": "REQUEST_MORE_INFORMATION"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-workshop",
+      "policy": "incubator",
+      "score": 90,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "This entity offers resources only; it cannot satisfy the cash request."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 76.67,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-launchpad",
+      "policy": "accelerator",
+      "score": 88.33,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 91.67,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-operator",
+      "policy": "angel",
+      "score": 95,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 91.67,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-frontier",
+      "policy": "vc_pre_seed",
+      "score": 93.33,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 88.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-seed",
+      "policy": "vc_seed",
+      "score": 63.33,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: pre_seed is outside seed / series_a.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 63.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-growth",
+      "policy": "vc_growth",
+      "score": 47.5,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence."
+      ],
+      "hardFailures": [
+        "Stage: pre_seed is outside growth / series_c_plus.",
+        "Required revenue is not reported.",
+        "Default growth/buyout policy does not underwrite a pre-revenue company; special situations require a separate policy."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-pe",
+      "policy": "private_equity",
+      "score": 35,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence."
+      ],
+      "hardFailures": [
+        "Stage: pre_seed is outside growth / mature / buyout_ready.",
+        "Required revenue is not reported.",
+        "Default growth/buyout policy does not underwrite a pre-revenue company; special situations require a separate policy."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-credit",
+      "policy": "bank",
+      "score": 25,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence.",
+        "Repayment source and positive cash flow covering reported debt service are unresolved; proposed loan terms still require underwriting."
+      ],
+      "hardFailures": [
+        "Stage: pre_seed is outside growth / mature / buyout_ready.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-strategic",
+      "policy": "strategic",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: pre_seed is outside seed / series_a / growth.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-university",
+      "policy": "program",
+      "score": 86.67,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 88.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-policy",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: pre_seed is outside prototype / seed / growth."],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-venture-debt",
+      "policy": "bank",
+      "score": 25,
+      "decision": "REJECTED",
+      "gaps": [
+        "Current, shared financials evidence is missing (180-day policy).",
+        "Financial statements, annual revenue, operating cash flow and debt need current shared evidence.",
+        "Repayment source and positive cash flow covering reported debt service are unresolved; proposed loan terms still require underwriting."
+      ],
+      "hardFailures": [
+        "Stage: pre_seed is outside series_a / growth.",
+        "Required revenue is not reported."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-family",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: pre_seed is outside seed / growth / mature."],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "demo-platform",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: pre_seed is outside prototype / seed."],
+      "fixedSevenWeightAblation": {
+        "score": 60,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "preseed-ai",
+      "entity": "y-combinator",
+      "policy": "accelerator",
+      "score": 68.33,
+      "decision": "REQUEST_MORE_INFORMATION",
+      "gaps": [
+        "Stage or target stages are unknown.",
+        "Provider exclusions are unknown.",
+        "Capital availability or ticket is unknown.",
+        "Provider technical_team requirement is unknown.",
+        "Catalogue scaffold is incomplete and cannot authorize an introduction.",
+        "Current, sourced mandate evidence is missing."
+      ],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 31.67,
+        "decision": "REQUEST_MORE_INFORMATION"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-workshop",
+      "policy": "incubator",
+      "score": 50,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: growth is outside idea / pre_company / prototype / pre_seed.",
+        "This entity offers resources only; it cannot satisfy the cash request."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 50,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-launchpad",
+      "policy": "accelerator",
+      "score": 65,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: growth is outside idea / prototype / pre_seed / seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-operator",
+      "policy": "angel",
+      "score": 85,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: growth is outside idea / prototype / pre_seed / seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-frontier",
+      "policy": "vc_pre_seed",
+      "score": 73.33,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: growth is outside prototype / pre_seed."],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-seed",
+      "policy": "vc_seed",
+      "score": 71.67,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: growth is outside seed / series_a."],
+      "fixedSevenWeightAblation": {
+        "score": 71.67,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-growth",
+      "policy": "vc_growth",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 93.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-pe",
+      "policy": "private_equity",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 93.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-credit",
+      "policy": "bank",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-strategic",
+      "policy": "strategic",
+      "score": 93.33,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 93.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-university",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: growth is outside idea / pre_company / prototype / pre_seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-policy",
+      "policy": "program",
+      "score": 80,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-venture-debt",
+      "policy": "bank",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-family",
+      "policy": "program",
+      "score": 80,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "demo-platform",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: growth is outside prototype / seed."],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "growth-company",
+      "entity": "y-combinator",
+      "policy": "accelerator",
+      "score": 60,
+      "decision": "REQUEST_MORE_INFORMATION",
+      "gaps": [
+        "Stage or target stages are unknown.",
+        "Provider exclusions are unknown.",
+        "Capital availability or ticket is unknown.",
+        "Provider technical_team requirement is unknown.",
+        "Catalogue scaffold is incomplete and cannot authorize an introduction.",
+        "Current, sourced mandate evidence is missing."
+      ],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 30,
+        "decision": "REQUEST_MORE_INFORMATION"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-workshop",
+      "policy": "incubator",
+      "score": 50,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: mature is outside idea / pre_company / prototype / pre_seed.",
+        "This entity offers resources only; it cannot satisfy the cash request."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 50,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-launchpad",
+      "policy": "accelerator",
+      "score": 65,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: mature is outside idea / prototype / pre_seed / seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-operator",
+      "policy": "angel",
+      "score": 85,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: mature is outside idea / prototype / pre_seed / seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-frontier",
+      "policy": "vc_pre_seed",
+      "score": 73.33,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside prototype / pre_seed."],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-seed",
+      "policy": "vc_seed",
+      "score": 71.67,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside seed / series_a."],
+      "fixedSevenWeightAblation": {
+        "score": 71.67,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-growth",
+      "policy": "vc_growth",
+      "score": 85,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside growth / series_c_plus."],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-pe",
+      "policy": "private_equity",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 93.33,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-credit",
+      "policy": "bank",
+      "score": 100,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-strategic",
+      "policy": "strategic",
+      "score": 68.33,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside seed / series_a / growth."],
+      "fixedSevenWeightAblation": {
+        "score": 68.33,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-university",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": [
+        "Stage: mature is outside idea / pre_company / prototype / pre_seed."
+      ],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-policy",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside prototype / seed / growth."],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-venture-debt",
+      "policy": "bank",
+      "score": 95,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside series_a / growth."],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-family",
+      "policy": "program",
+      "score": 80,
+      "decision": "INTRODUCTION_READY",
+      "gaps": [],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 90,
+        "decision": "INTRODUCTION_READY"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "demo-platform",
+      "policy": "program",
+      "score": 60,
+      "decision": "REJECTED",
+      "gaps": [],
+      "hardFailures": ["Stage: mature is outside prototype / seed."],
+      "fixedSevenWeightAblation": {
+        "score": 65,
+        "decision": "REJECTED"
+      }
+    },
+    {
+      "company": "mature-company",
+      "entity": "y-combinator",
+      "policy": "accelerator",
+      "score": 60,
+      "decision": "REQUEST_MORE_INFORMATION",
+      "gaps": [
+        "Stage or target stages are unknown.",
+        "Provider exclusions are unknown.",
+        "Capital availability or ticket is unknown.",
+        "Provider technical_team requirement is unknown.",
+        "Catalogue scaffold is incomplete and cannot authorize an introduction.",
+        "Current, sourced mandate evidence is missing."
+      ],
+      "hardFailures": [],
+      "fixedSevenWeightAblation": {
+        "score": 30,
+        "decision": "REQUEST_MORE_INFORMATION"
+      }
+    }
+  ],
+  "latencyMs": {
+    "median": 0.02199999999999136,
+    "p95": 0.05689999999998463
+  },
+  "tokenUse": {
+    "modelCalls": 0,
+    "llmTokens": 0
+  },
+  "limits": "60 synthetic/partial-source policy cases. Seven-weight ablation keeps V0.2 gates and is NOT a full V0.1 rerun. Timing excludes D1/network/UI. Real-world precision, funding outcomes, underwriting validity and user utility: UNMEASURED."
+}

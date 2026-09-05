@@ -1,0 +1,14 @@
+{
+  "id": "synthetic-candidate",
+  "name": "Fictional Agent Startup",
+  "sector": "AI",
+  "stage": "seed",
+  "snapshotDate": "2026-08-15",
+  "features": {
+    "revenue_usd": 620000,
+    "growth": 1.1,
+    "runway": 18,
+    "customers": 62,
+    "technical_experience": 8
+  }
+}

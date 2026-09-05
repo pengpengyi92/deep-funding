@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { performance } from "node:perf_hooks";
 import { demo } from "../data/demo";
 import { evaluate } from "../packages/matching";
+import { ENGINE_VERSION } from "../packages/agents";
 const now = new Date("2026-09-05T12:00:00Z");
 const data = demo(now);
 const expected = [
@@ -32,7 +33,7 @@ for (let i = 0; i < count; i++) {
 durations.sort((a, b) => a - b);
 const report = {
   measuredAt: new Date().toISOString(),
-  engineVersion: "rules-1.0.0",
+  engineVersion: ENGINE_VERSION,
   runtime: process.version,
   platform: process.platform,
   fixtureDate: now.toISOString(),
@@ -57,7 +58,7 @@ const report = {
 };
 mkdirSync("docs/benchmarks", { recursive: true });
 writeFileSync(
-  "docs/benchmarks/v0.1-synthetic.json",
+  "docs/benchmarks/v0.2-legacy-regression.json",
   JSON.stringify(report, null, 2) + "\n",
 );
 console.log(JSON.stringify(report, null, 2));

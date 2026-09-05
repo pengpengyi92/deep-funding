@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2.0",
+  "slug": "y-combinator",
+  "name": "Y Combinator",
+  "description": "Starter catalogue profile: founder program, capital and networks. Partial official-source research; current investment terms and eligibility are deliberately not encoded.",
+  "entity_type": "organization",
+  "categories": ["accelerator", "venture_capital"],
+  "policy_id": "accelerator",
+  "target_stages": null,
+  "provides_capital": true,
+  "capital_forms": null,
+  "provides": [
+    "Mentorship",
+    "Founder network",
+    "Investor network",
+    "Fundraising support"
+  ],
+  "geographies": ["Global"],
+  "industries": null,
+  "exclusions": null,
+  "ticket_usd": null,
+  "company_requirements": {
+    "product": "not_required",
+    "traction": "not_required",
+    "revenue": "not_required",
+    "technical_team": "unknown",
+    "minimum_mrr_usd": null
+  },
+  "evidence_required": [],
+  "terms": null,
+  "application": {
+    "method": "Official online application; confirm current batch and requirements",
+    "url": "https://www.ycombinator.com/apply",
+    "deadline": null
+  },
+  "source_metadata": {
+    "status": "scaffold",
+    "verified_at": null,
+    "sources": [
+      {
+        "url": "https://www.ycombinator.com/about",
+        "accessed_at": "2026-09-05",
+        "claims": [
+          "capital and founder program",
+          "mentorship, founder network, investor access"
+        ]
+      },
+      {
+        "url": "https://www.ycombinator.com/faq",
+        "accessed_at": "2026-09-05",
+        "claims": [
+          "early and pre-revenue applications considered",
+          "worldwide applications; participation logistics require separate review"
+        ]
+      }
+    ],
+    "notes": "Categories and policy are our classification, not YC's published scoring rubric. Global describes application reach, not remote participation. No complete mandate or current terms verification; no introduction authorization."
+  }
+}
