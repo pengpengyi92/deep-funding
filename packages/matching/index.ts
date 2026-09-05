@@ -5,7 +5,9 @@ import {
   usableEvidence,
 } from "../agents";
 import { createRun, emit } from "../a2a";
-import type { Company, Funder, Profile, Match, Dimension } from "../schemas";
+import type { Company, Funder, Profile, Match } from "../schemas";
+import { fundingProfileOf } from "../knowledge/adapter";
+import { screenFunding } from "../knowledge/screen";
 
 export const defaultWeights = {
   Stage: 25,
@@ -17,6 +19,19 @@ export const defaultWeights = {
   Strategic: 10,
 };
 export type Weights = typeof defaultWeights;
+export function matchIsStale(
+  m: Match,
+  companyVersion: number | undefined,
+  funderVersion: number | undefined,
+  now = new Date(),
+): boolean {
+  return (
+    m.engineVersion !== ENGINE_VERSION ||
+    companyVersion !== m.companyVersion ||
+    funderVersion !== m.funderVersion ||
+    m.createdAt.slice(0, 10) !== now.toISOString().slice(0, 10)
+  );
+}
 export function compareMatches(a: Match, b: Match): number {
   const priority = {
     INTRODUCTION_READY: 0,
@@ -35,24 +50,25 @@ export function evaluate(
   company: Profile<Company>,
   funder: Profile<Funder>,
   now = new Date(),
-  weights: Weights = defaultWeights,
+  weights?: Weights,
 ) {
   if (
-    Object.values(weights).some((w) => !Number.isFinite(w) || w < 0) ||
-    Math.abs(Object.values(weights).reduce((a, b) => a + b, 0) - 100) > 1e-8
+    weights &&
+    (Object.values(weights).some((w) => !Number.isFinite(w) || w < 0) ||
+      Math.abs(Object.values(weights).reduce((a, b) => a + b, 0) - 100) > 1e-8)
   )
     throw new Error("Weights must be finite, nonnegative and sum to 100");
   if (!company.data.shareForMatching || !funder.data.shareForMatching)
     throw new Error("Both profiles must consent to matching");
   const c = companyAgents.information(company.data),
     f = fundingAgents.information(funder.data);
-  const ca = companyAgents.analysis(c),
+  const ca = companyAgents.analysis(c, now),
     fa = fundingAgents.analysis(f),
-    cu = companyAgents.audit(c, now),
+    cu = companyAgents.audit(c, now, f),
     fu = fundingAgents.audit(f, now);
   const cp = companyAgents.match(c, f),
-    fp = fundingAgents.match(c, f);
-  const hardFailures = [...fp.failures, ...(!cp.accepted ? [cp.summary] : [])];
+    fp = fundingAgents.match(c, f, now);
+  const hardFailures = [...new Set(fp.failures)];
   const gaps = [...new Set([...cu.gaps, ...fu.gaps, ...fp.gaps])];
   const evidence = [
     ...c.evidence.map((e) => ({ ...e, id: `company:${e.id}` })),
@@ -67,75 +83,12 @@ export function evaluate(
           usableEvidence(e, now),
       )
       .map((e) => e.id);
-  const fact = (field: string) => refs(field).length > 0;
-  const dimensions: Dimension[] = [];
-  const dim = (
-    name: keyof Weights,
-    value: number,
-    reason: string,
-    evidenceRefs: string[],
-  ) =>
-    dimensions.push({
-      name,
-      weight: weights[name],
-      value,
-      points: Math.round(value * weights[name] * 100) / 100,
-      reason,
-      evidenceRefs,
-    });
-  dim(
-    "Stage",
-    f.stages.includes(c.stage) ? 1 : 0,
-    `${c.stage}; mandate: ${f.stages.join(", ")}`,
-    refs("mandate"),
-  );
-  dim(
-    "Sector",
-    f.sectors.includes(c.sector) ? 1 : 0,
-    `${c.sector}; preferred sectors: ${f.sectors.join(", ")}`,
-    refs("mandate"),
-  );
-  dim(
-    "Ticket",
-    c.raiseUsd >= f.ticketMinUsd && c.raiseUsd <= f.ticketMaxUsd ? 1 : 0,
-    `USD ${c.raiseUsd}; single-provider ticket assumption (not total syndicate round).`,
-    refs("mandate"),
-  );
-  dim(
-    "Geography",
-    f.regions.includes("Global") || f.regions.includes(c.region) ? 1 : 0,
-    `${c.region}; no cross-border eligibility implied.`,
-    refs("mandate"),
-  );
-  const traction = fact("traction")
-    ? (Number(c.customers !== null && c.customers > 0) +
-        Number(c.mrrUsd !== null && c.mrrUsd > 0)) /
-      2
-    : 0;
-  dim(
-    "Traction",
-    traction,
-    "Demo policy: current shared evidence plus reported customers and positive MRR (5 points each).",
-    refs("traction"),
-  );
-  dim(
-    "Team",
-    fact("team") && c.technicalTeam === true ? 1 : 0,
-    "Demo policy: technical founding team with current shared evidence.",
-    refs("team"),
-  );
-  const coverage = c.strategicNeeds.length
-    ? c.strategicNeeds.filter((r) => f.strategicResources.includes(r)).length /
-      c.strategicNeeds.length
-    : 0;
-  dim(
-    "Strategic",
-    coverage,
-    `${Math.round(coverage * 100)}% of requested resources covered; no needs specified earns zero, not a free score.`,
-    refs("mandate"),
-  );
-  const score =
-    Math.round(dimensions.reduce((n, d) => n + d.points, 0) * 100) / 100;
+  const assessment = screenFunding(c, fundingProfileOf(f), now, weights);
+  const { dimensions, score } = assessment;
+  for (const dimension of dimensions) {
+    if (!dimension.evidenceRefs.length)
+      dimension.evidenceRefs = refs("mandate");
+  }
   const decision: Match["decision"] = hardFailures.length
     ? "REJECTED"
     : gaps.length
@@ -199,6 +152,7 @@ export function evaluate(
     acceptedCapitalTypes: c.capitalTypes,
   });
   emit(run, "MATCH_RESPONSE", "funding.match", "company.match", fp.summary, {
+    policyId: assessment.policyId,
     hardFailures,
     dimensions,
     score,
@@ -232,7 +186,13 @@ export function evaluate(
     decision,
     hardFailures,
     gaps,
-    warnings: [...new Set([...cu.warnings, ...fu.warnings])],
+    warnings: [
+      ...new Set([
+        ...cu.warnings,
+        ...fu.warnings,
+        "Policy scores are not calibrated across funding categories and are not funding probabilities.",
+      ]),
+    ],
     dimensions,
     companyAnalysis: ca,
     funderAnalysis: fa,
@@ -243,6 +203,7 @@ export function evaluate(
     nextAction,
     evidenceSnapshot: evidence,
     engineVersion: ENGINE_VERSION,
+    policyId: assessment.policyId,
   };
   return { match, run };
 }

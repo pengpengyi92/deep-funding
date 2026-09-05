@@ -4,6 +4,27 @@
 
 Open-source, evidence-aware Agent-to-Agent funding matchmaking. Two top-level agents, eight scoped sub-agents, one inspectable match protocol. A runnable **fictional-data sandbox**, not an investor directory, investment recommendation or autonomous dealmaker.
 
+## V0.2: RSI + Capital / Resources
+
+**Your data. Your benchmark.** [RSI workspace](https://pengyi-deep-funding.pengpengyi92.workers.dev/rsi) combines Founder RSI, Funding RSI and an explainable, deterministic benchmark engine. GUI, keyboard-first TUI and CLI reuse the same TypeScript application services. Private RSI files stay in browser memory or a local terminal store; no remote inference or upload is implemented.
+
+- Founder RSI: mandate gates + scoped interaction history + portfolio similarity; explain every component and unknown.
+- Funding RSI: eight cohort modes, configurable feature weights/bounds, missing-data coverage, descriptive thresholds, empirical percentiles and append-only versioned observations.
+- Shenzhen-first data foundation: strict JSONL/schema and source workflow, **zero verified real Shenzhen profiles** at this release. Three Shenzhen-labelled examples are fictional.
+- Terminal: `npm run cli -- --help`, or `npm link` then `deepfunding --help` (`deepfunding.cmd` when PowerShell blocks npm's script shim).
+
+Guides: [Founder RSI](docs/founder-rsi.md), [Funding RSI](docs/funding-rsi.md), [Benchmark](docs/benchmark.md), [CLI](docs/cli.md), [TUI](docs/tui.md), [Private data](docs/private-data.md).
+
+### Capital + Resources
+
+**Funding is not only money. Funding is the set of capital and resources that helps a founder or company reach its next stage.**
+
+[Funding Explorer](https://pengyi-deep-funding.pengpengyi92.workers.dev/funding/explorer) now covers nine groups, sixteen multi-label categories, eleven company-stage labels and ten versioned screening policies. Browse, search, inspect source provenance, download canonical JSON and run a full A2A preview. Import a provider into your private workspace to reuse the existing audited workflow.
+
+Institution categories, capital instruments and non-financial resources are separate. Company stage and financing history are separate. Resource-only requests do not need a cash ticket. Bank/PE/growth policies require financial disclosures; early-stage programs do not universally require revenue or a launched product. Readiness is evidence coverage, not funding probability.
+
+The starter catalogue contains **14 fictional fixtures and one partial YC scaffold**, not 15 verified funding opportunities. YC terms, deadlines and incomplete mandate fields remain unknown. No application or introduction is sent. See the [knowledge base](funding/README.md), [integration notes](docs/FUNDING_TAXONOMY.md) and [V0.2 release](docs/RELEASE_V0.2.md).
+
 ![Deep Funding application](docs/images/overview.png)
 
 ## Try It
@@ -55,19 +76,21 @@ Company Agent                         Funding Agent
 - `worker-configuration.d.ts`: generated locally by `npm run types` / `npm run check`, not committed.
 - `packages/a2a`: versioned application-level messages. No external A2A-standard interoperability claim.
 - `packages/matching`: hard constraints, evidence gates and configurable weighted fit.
-- `packages/knowledge`: thirteen capital-category review checklists.
+- `packages/knowledge`: canonical taxonomy, validated profiles, readiness, compatibility adapters and policy screening.
+- `funding/`: category-governed Markdown knowledge base and canonical JSON profiles.
+- `schemas/funding_profile.schema.json`: generated structural JSON Schema; runtime validation also applies cross-field rules.
 - `packages/connectors`: provider-agnostic optional explanation and external-data boundaries. **No live providers configured.**
 - `data/demo.ts`: entirely fictional demo profiles, generated with an explicit date.
 
 ## What Is Actually Implemented
 
-Information → Analysis → Audit → bilateral Match → decision → human request, with real CRUD, database writes and inspectable protocol events. Matching uses **rules-1.0.0**, not a hidden LLM. The optional explanation adapter accepts only bounded text, labels it `INFERRED`, and cannot change the authoritative verdict. It is tested using a stub and is not invoked by the hosted app.
+Information → Analysis → Audit → bilateral Match → decision → human request, with real CRUD, database writes and inspectable protocol events. Matching uses **rules-2.0.0**, not a hidden LLM. The optional explanation adapter accepts only bounded text, labels it `INFERRED`, and cannot change the authoritative verdict. It is tested using a stub and is not invoked by the hosted app.
 
 Mandates can be edited through the UI. Hard filters always veto scoring. A match requires current shared evidence and a score of at least 75 for human review. The sample leading match is **96.67**, calculated rather than forced to the brief's illustrative score. See [matching policy](docs/MATCHING.md).
 
 ## Privacy & Limits
 
-**Use fictional data only.** The public demo has anonymous, cookie-bound workspaces, not verified company identities. A 256-bit HTTP-only session token is hashed before storage. Records are owner-scoped. Workspaces expire after seven days and are deleted by daily cleanup; users can delete earlier. Losing the cookie loses access. No account recovery, cross-device identity, partner invitations or real capital network exists in V0.1.
+**Use fictional data only.** The public demo has anonymous, cookie-bound workspaces, not verified company identities. A 256-bit HTTP-only session token is hashed before storage. Records are owner-scoped. Workspaces expire after seven days and are deleted by daily cleanup; users can delete earlier. Losing the cookie loses access. No account recovery, cross-device identity, partner invitations or real capital network exists in V0.2.
 
 Core profile sharing requires explicit consent. Private notes and `PRIVATE` / `NDA_REQUIRED` evidence never enter A2A matches. `PUBLIC` means share-eligible inside this sandbox, not globally published. Existing snapshots remain in private history after consent withdrawal until deletion. All claims are `PROVIDED` or `UNKNOWN`; the app cannot self-assign `VERIFIED`. Source freshness is a configurable 180-day demo policy.
 

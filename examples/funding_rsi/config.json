@@ -1,0 +1,61 @@
+{
+  "asOf": "2026-09-05",
+  "mode": "historical_median",
+  "sector": null,
+  "stage": null,
+  "from": null,
+  "to": null,
+  "ids": [],
+  "providerId": "demo-frontier",
+  "percentile": 75,
+  "minSamples": 3,
+  "minCoverage": 0.8,
+  "successMultiple": 2,
+  "features": [
+    {
+      "key": "revenue_usd",
+      "label": "Annual revenue",
+      "unit": "USD/year",
+      "weight": 20,
+      "min": 0,
+      "max": 1000000,
+      "direction": "higher"
+    },
+    {
+      "key": "growth",
+      "label": "Revenue growth",
+      "unit": "fraction/year",
+      "weight": 25,
+      "min": -0.5,
+      "max": 2,
+      "direction": "higher"
+    },
+    {
+      "key": "runway",
+      "label": "Cash runway",
+      "unit": "months",
+      "weight": 20,
+      "min": 0,
+      "max": 24,
+      "direction": "higher"
+    },
+    {
+      "key": "customers",
+      "label": "Paying customers",
+      "unit": "count",
+      "weight": 15,
+      "min": 0,
+      "max": 100,
+      "direction": "higher"
+    },
+    {
+      "key": "technical_experience",
+      "label": "Domain engineering experience",
+      "unit": "years",
+      "weight": 20,
+      "min": 0,
+      "max": 10,
+      "direction": "higher"
+    }
+  ]
+}

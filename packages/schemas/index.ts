@@ -1,4 +1,10 @@
 import { z } from "zod";
+import {
+  companyStages,
+  resourceTypes,
+  categories,
+} from "../knowledge/taxonomy";
+import { fundingProfileSchema } from "../knowledge/profile-schema";
 
 export const stages = [
   "Pre-seed",
@@ -35,14 +41,7 @@ export const capitalTypes = [
   "Strategic investor",
   "Family office",
 ] as const;
-export const resources = [
-  "Enterprise distribution",
-  "Technical expertise",
-  "Recruiting",
-  "Overseas expansion",
-  "Manufacturing",
-  "Regulatory support",
-] as const;
+export const resources = resourceTypes;
 export const visibility = [
   "PUBLIC",
   "MATCH_ONLY",
@@ -54,7 +53,7 @@ const money = z.number().finite().min(0).max(1e12);
 export const evidenceSchema = z
   .object({
     id: z.string().min(1).max(80),
-    field: z.enum(["product", "traction", "team", "mandate"]),
+    field: z.enum(["product", "traction", "team", "mandate", "financials"]),
     label: text,
     source: z.string().trim().max(500),
     provenance: z.enum(["PROVIDED", "UNKNOWN"]),
@@ -78,21 +77,67 @@ export const companySchema = z
   .object({
     ...base,
     stage: z.enum(stages),
+    companyStage: z.enum(companyStages).nullable().optional(),
+    financingRound: z
+      .enum([
+        "none",
+        "pre_seed",
+        "seed",
+        "series_a",
+        "series_b",
+        "series_c_plus",
+      ])
+      .nullable()
+      .optional(),
+    resourceOnly: z.boolean().optional(),
+    financials: z
+      .object({
+        annualRevenueUsd: money.nullable(),
+        operatingCashFlowUsd: z
+          .number()
+          .finite()
+          .min(-1e12)
+          .max(1e12)
+          .nullable(),
+        debtUsd: money.nullable(),
+        annualDebtServiceUsd: money.nullable(),
+        repaymentSource: z.string().trim().min(5).max(500).nullable(),
+        statementsAvailable: z.boolean().nullable(),
+      })
+      .strict()
+      .optional(),
     region: z.enum(regions),
     sector: z.enum(sectors),
-    raiseUsd: money.positive(),
+    raiseUsd: money,
     capitalTypes: z.array(z.enum(capitalTypes)).min(1).max(10),
+    acceptedCategories: z
+      .array(z.enum(categories))
+      .min(1)
+      .max(categories.length)
+      .optional(),
     mrrUsd: money.nullable(),
     customers: z.number().int().min(0).max(1e9).nullable(),
     teamSize: z.number().int().min(1).max(1e6),
     technicalTeam: z.boolean().nullable(),
     workingProduct: z.boolean().nullable(),
     useOfFunds: z.string().trim().min(5).max(1000),
-    strategicNeeds: z.array(z.enum(resources)).max(6),
+    strategicNeeds: z.array(z.enum(resources)).max(resources.length),
   })
   .strict()
+  .refine(
+    (p) =>
+      p.resourceOnly
+        ? p.raiseUsd === 0 && p.strategicNeeds.length > 0
+        : p.raiseUsd > 0,
+    {
+      message:
+        "Resource-only requests need resources and zero cash; capital requests need a positive cash amount",
+      path: ["raiseUsd"],
+    },
+  )
   .refine((p) => p.evidence.every((e) => e.field !== "mandate"), {
-    message: "Company evidence must describe product, traction or team",
+    message:
+      "Company evidence must describe product, traction, team or financials",
     path: ["evidence"],
   })
   .refine(
@@ -103,16 +148,17 @@ export const funderSchema = z
   .object({
     ...base,
     capitalType: z.enum(capitalTypes),
-    stages: z.array(z.enum(stages)).min(1).max(5),
-    regions: z.array(z.enum(regions)).min(1).max(5),
-    sectors: z.array(z.enum(sectors)).min(1).max(7),
+    fundingProfile: fundingProfileSchema.optional(),
+    stages: z.array(z.enum(stages)).max(5),
+    regions: z.array(z.enum(regions)).max(5),
+    sectors: z.array(z.enum(sectors)).max(7),
     excludedSectors: z.array(z.enum(sectors)).max(7),
-    ticketMinUsd: money,
-    ticketMaxUsd: money.positive(),
-    minimumMrrUsd: money,
-    requiresProduct: z.boolean(),
-    requiresTechnicalTeam: z.boolean(),
-    strategicResources: z.array(z.enum(resources)).max(6),
+    ticketMinUsd: money.nullable(),
+    ticketMaxUsd: money.positive().nullable(),
+    minimumMrrUsd: money.nullable(),
+    requiresProduct: z.boolean().nullable(),
+    requiresTechnicalTeam: z.boolean().nullable(),
+    strategicResources: z.array(z.enum(resources)).max(resources.length),
   })
   .strict()
   .refine((p) => p.evidence.every((e) => e.field === "mandate"), {
@@ -123,10 +169,32 @@ export const funderSchema = z
     (p) => new Set(p.evidence.map((e) => e.id)).size === p.evidence.length,
     { message: "Evidence IDs must be unique", path: ["evidence"] },
   )
-  .refine((x) => x.ticketMinUsd <= x.ticketMaxUsd, {
-    message: "Minimum ticket must not exceed maximum ticket",
-    path: ["ticketMinUsd"],
-  })
+  .refine(
+    (x) =>
+      !!x.fundingProfile ||
+      (x.stages.length > 0 &&
+        x.regions.length > 0 &&
+        x.sectors.length > 0 &&
+        x.ticketMinUsd !== null &&
+        x.ticketMaxUsd !== null &&
+        x.minimumMrrUsd !== null &&
+        x.requiresProduct !== null &&
+        x.requiresTechnicalTeam !== null),
+    {
+      message:
+        "Legacy mandates require complete constraints; unknowns need a canonical funding profile",
+    },
+  )
+  .refine(
+    (x) =>
+      x.ticketMinUsd === null ||
+      x.ticketMaxUsd === null ||
+      x.ticketMinUsd <= x.ticketMaxUsd,
+    {
+      message: "Minimum ticket must not exceed maximum ticket",
+      path: ["ticketMinUsd"],
+    },
+  )
   .refine((x) => !x.sectors.some((s) => x.excludedSectors.includes(s)), {
     message: "A sector cannot be both preferred and excluded",
     path: ["excludedSectors"],
@@ -153,6 +221,7 @@ export type Analysis = {
   strengths: string[];
   risks: string[];
   nextActions: string[];
+  readiness?: import("../knowledge/readiness").Readiness;
 };
 export type MessageType =
   | "PROFILE_READY"
@@ -217,6 +286,7 @@ export type Match = {
   nextAction: string;
   evidenceSnapshot: Evidence[];
   engineVersion: string;
+  policyId?: string;
 };
 export type Handoff = {
   id: string;

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.0",
+  "slug": "demo-seed",
+  "name": "Seed Research Partners (fictional)",
+  "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+  "entity_type": "program",
+  "categories": ["venture_capital"],
+  "policy_id": "vc_seed",
+  "target_stages": ["seed", "series_a"],
+  "provides_capital": true,
+  "capital_forms": ["equity"],
+  "provides": ["Enterprise distribution", "Technical expertise"],
+  "geographies": ["Global"],
+  "industries": ["AI", "SaaS"],
+  "exclusions": [],
+  "ticket_usd": {
+    "min": 10000,
+    "max": 5000000
+  },
+  "company_requirements": {
+    "product": "required",
+    "traction": "required",
+    "revenue": "required",
+    "technical_team": "not_required",
+    "minimum_mrr_usd": 0
+  },
+  "evidence_required": [],
+  "terms": null,
+  "application": {
+    "method": null,
+    "url": null,
+    "deadline": null
+  },
+  "source_metadata": {
+    "status": "synthetic",
+    "verified_at": null,
+    "sources": [
+      {
+        "url": "https://example.invalid/deep-funding/demo-seed",
+        "accessed_at": "2026-09-05",
+        "claims": ["mandate"]
+      }
+    ],
+    "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+  }
+}

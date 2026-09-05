@@ -1,0 +1,129 @@
+{
+  "incubator": {
+    "weights": {
+      "Stage": 20,
+      "Sector": 5,
+      "Geography": 10,
+      "Team": 25,
+      "Product": 10,
+      "Strategic": 30
+    },
+    "evidence": ["team"],
+    "financialGate": false
+  },
+  "accelerator": {
+    "weights": {
+      "Stage": 15,
+      "Sector": 5,
+      "Geography": 10,
+      "Team": 25,
+      "Product": 15,
+      "Traction": 10,
+      "Strategic": 20
+    },
+    "evidence": ["team"],
+    "financialGate": false
+  },
+  "angel": {
+    "weights": {
+      "Stage": 15,
+      "Sector": 10,
+      "Ticket": 10,
+      "Geography": 5,
+      "Team": 35,
+      "Product": 15,
+      "Traction": 10
+    },
+    "evidence": ["team"],
+    "financialGate": false
+  },
+  "vc_pre_seed": {
+    "weights": {
+      "Stage": 20,
+      "Sector": 15,
+      "Ticket": 10,
+      "Geography": 5,
+      "Team": 25,
+      "Product": 15,
+      "Strategic": 10
+    },
+    "evidence": ["team"],
+    "financialGate": false
+  },
+  "vc_seed": {
+    "weights": {
+      "Stage": 25,
+      "Sector": 20,
+      "Ticket": 15,
+      "Geography": 10,
+      "Traction": 10,
+      "Team": 10,
+      "Strategic": 10
+    },
+    "evidence": ["team", "product", "traction"],
+    "financialGate": false
+  },
+  "vc_growth": {
+    "weights": {
+      "Stage": 15,
+      "Sector": 10,
+      "Ticket": 10,
+      "Geography": 5,
+      "Traction": 25,
+      "Financials": 25,
+      "Team": 10
+    },
+    "evidence": ["team", "traction", "financials"],
+    "financialGate": true
+  },
+  "private_equity": {
+    "weights": {
+      "Stage": 15,
+      "Sector": 10,
+      "Ticket": 10,
+      "Geography": 5,
+      "Financials": 40,
+      "Repayment": 10,
+      "Team": 10
+    },
+    "evidence": ["team", "financials"],
+    "financialGate": true
+  },
+  "bank": {
+    "weights": {
+      "Stage": 5,
+      "Sector": 5,
+      "Ticket": 15,
+      "Geography": 5,
+      "Financials": 30,
+      "Repayment": 40
+    },
+    "evidence": ["financials"],
+    "financialGate": true
+  },
+  "program": {
+    "weights": {
+      "Stage": 20,
+      "Sector": 15,
+      "Geography": 25,
+      "Team": 15,
+      "Product": 5,
+      "Strategic": 20
+    },
+    "evidence": ["team"],
+    "financialGate": false
+  },
+  "strategic": {
+    "weights": {
+      "Stage": 25,
+      "Sector": 20,
+      "Ticket": 15,
+      "Geography": 10,
+      "Traction": 10,
+      "Team": 10,
+      "Strategic": 10
+    },
+    "evidence": ["team", "product", "traction"],
+    "financialGate": false
+  }
+}

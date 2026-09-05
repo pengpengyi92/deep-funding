@@ -1,0 +1,15 @@
+title: "[V0.2 feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: "Share bounded feedback on RSI, taxonomy, CLI or TUI. Use synthetic/redacted data only."
+  - type: textarea
+    attributes:
+      label: Observation and expected behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction, baseline and proposed test
+    validations:
+      required: true

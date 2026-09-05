@@ -1,16 +1,11 @@
 import type { Company, Funder, Audit, Analysis, Evidence } from "../schemas";
+import { fundingReadiness, stageOf } from "../knowledge/readiness";
+import { fundingProfileOf, acceptsProvider } from "../knowledge/adapter";
+import { screenFunding } from "../knowledge/screen";
+import { usableEvidence } from "../knowledge/evidence";
+export { usableEvidence } from "../knowledge/evidence";
 
-export const ENGINE_VERSION = "rules-1.0.0";
-export function usableEvidence(e: Evidence, now: Date): boolean {
-  const age = now.getTime() - new Date(e.observedAt).getTime();
-  return (
-    ["PUBLIC", "MATCH_ONLY"].includes(e.visibility) &&
-    e.provenance === "PROVIDED" &&
-    !!e.source.trim() &&
-    age >= 0 &&
-    age <= 180 * 86400000
-  );
-}
+export const ENGINE_VERSION = "rules-2.0.0";
 export function shared<T extends Company | Funder>(p: T): T {
   return {
     ...p,
@@ -57,9 +52,10 @@ export const companyAgents = {
   information(p: Company) {
     return shared(p);
   },
-  analysis(p: Company): Analysis {
+  analysis(p: Company, now = new Date()): Analysis {
     return {
-      summary: `${p.stage} ${p.sector} company seeking USD ${p.raiseUsd.toLocaleString("en-US")} through ${p.capitalTypes.join(" / ")}.`,
+      readiness: fundingReadiness(p, now),
+      summary: `${stageOf(p) ?? "Unknown stage"} ${p.sector} company seeking ${p.resourceOnly ? "non-capital resources" : `USD ${p.raiseUsd.toLocaleString("en-US")}`} through ${p.acceptedCategories?.join(" / ") || p.capitalTypes.join(" / ")}.`,
       strengths: [
         p.workingProduct === true
           ? "Working product reported."
@@ -79,7 +75,13 @@ export const companyAgents = {
       ],
     };
   },
-  audit(p: Company, now: Date): Audit {
+  audit(p: Company, now: Date, f?: Funder): Audit {
+    if (f) {
+      const result = auditEvidence(p, [], now);
+      result.gaps.push(...screenFunding(p, fundingProfileOf(f), now).gaps);
+      result.status = result.gaps.length ? "GAPS" : "REVIEWABLE";
+      return result;
+    }
     const result = auditEvidence(p, ["team", "product", "traction"], now);
     if (
       p.mrrUsd === null ||
@@ -98,24 +100,39 @@ export const companyAgents = {
     return result;
   },
   match(p: Company, f: Funder) {
+    const categories = fundingProfileOf(f).categories;
     return {
-      accepted: p.capitalTypes.includes(f.capitalType),
-      summary: p.capitalTypes.includes(f.capitalType)
-        ? `${f.capitalType} is an accepted capital type; strategic needs are evaluated separately.`
-        : `Company does not accept ${f.capitalType} capital.`,
+      accepted: acceptsProvider(p, fundingProfileOf(f)),
+      summary: acceptsProvider(p, fundingProfileOf(f))
+        ? `${categories.join(" / ")} includes an accepted provider category; capital and resources are checked separately.`
+        : `Company does not accept ${categories.join(" / ")} providers.`,
     };
   },
 };
 export const fundingAgents = {
   information(p: Funder) {
+    if (p.fundingProfile)
+      return shared({
+        ...p,
+        evidence: p.fundingProfile.source_metadata.sources.map((s, i) => ({
+          id: `catalogue-source-${i}`,
+          field: "mandate" as const,
+          label: s.claims.join("; ").slice(0, 250),
+          source: s.url,
+          observedAt: s.accessed_at,
+          visibility: "PUBLIC" as const,
+          provenance: "PROVIDED" as const,
+        })),
+      });
     return shared(p);
   },
   analysis(p: Funder): Analysis {
+    const k = fundingProfileOf(p);
     return {
-      summary: `${p.capitalType} mandate: ${p.stages.join(" / ")} in ${p.regions.join(" / ")}; USD ${p.ticketMinUsd.toLocaleString("en-US")}-${p.ticketMaxUsd.toLocaleString("en-US")}.`,
+      summary: `${k.categories.join(" / ")}; policy ${k.policy_id}; target stages ${k.target_stages?.join(" / ") ?? "unknown"}; ${k.provides_capital === false ? "resources only" : "capital terms require review"}.`,
       strengths: [
-        `Preference: ${p.sectors.join(", ")}.`,
-        ...p.strategicResources.map((r) => `${r} reported.`),
+        `Preference: ${k.industries?.join(", ") || "unknown"}.`,
+        ...k.provides.map((r) => `${r} reported.`),
       ],
       risks: [
         "Fund availability, decision authority and mandate authenticity are not verified.",
@@ -127,33 +144,41 @@ export const fundingAgents = {
     };
   },
   audit(p: Funder, now: Date): Audit {
+    if (p.fundingProfile) {
+      const k = p.fundingProfile;
+      const recent = k.source_metadata.sources.some((s) => {
+        const age = now.getTime() - new Date(s.accessed_at).getTime();
+        return (
+          age >= 0 && age <= 180 * 86400000 && s.claims.includes("mandate")
+        );
+      });
+      const gaps = [
+        ...(!p.shareForMatching
+          ? ["Profile sharing consent is disabled."]
+          : []),
+        ...(k.source_metadata.status === "scaffold"
+          ? [
+              "Catalogue scaffold is incomplete and cannot authorize an introduction.",
+            ]
+          : []),
+        ...(!recent ? ["Current, sourced mandate evidence is missing."] : []),
+      ];
+      return {
+        status: gaps.length ? "GAPS" : "REVIEWABLE",
+        gaps,
+        warnings: [
+          "Source claims and policy scores are not independently verified. Terms and authority require human review.",
+          ...(k.source_metadata.status === "synthetic"
+            ? ["Fictional fixture; no real investment opportunity."]
+            : []),
+        ],
+        evidence: [],
+      };
+    }
     return auditEvidence(p, ["mandate"], now);
   },
-  match(c: Company, f: Funder) {
-    const failures: string[] = [];
-    const gaps: string[] = [];
-    if (!f.stages.includes(c.stage))
-      failures.push(`Stage: ${c.stage} is outside ${f.stages.join(" / ")}.`);
-    if (!f.regions.includes("Global") && !f.regions.includes(c.region))
-      failures.push(`Geography: ${c.region} is outside the mandate.`);
-    if (c.raiseUsd < f.ticketMinUsd || c.raiseUsd > f.ticketMaxUsd)
-      failures.push(
-        "Requested single-provider ticket is outside the mandate range.",
-      );
-    if (f.excludedSectors.includes(c.sector))
-      failures.push(`Sector ${c.sector} is explicitly excluded.`);
-    if (c.mrrUsd === null && f.minimumMrrUsd > 0)
-      gaps.push("MRR is unknown; revenue constraint cannot be checked.");
-    else if (c.mrrUsd !== null && c.mrrUsd < f.minimumMrrUsd)
-      failures.push(`Monthly revenue is below USD ${f.minimumMrrUsd}.`);
-    if (f.requiresProduct && c.workingProduct === false)
-      failures.push("A working product is required.");
-    if (f.requiresProduct && c.workingProduct === null)
-      gaps.push("Product requirement is unresolved.");
-    if (f.requiresTechnicalTeam && c.technicalTeam === false)
-      failures.push("A technical founding team is required.");
-    if (f.requiresTechnicalTeam && c.technicalTeam === null)
-      gaps.push("Technical team requirement is unresolved.");
+  match(c: Company, f: Funder, now = new Date()) {
+    const { failures, gaps } = screenFunding(c, fundingProfileOf(f), now);
     return {
       failures,
       gaps,

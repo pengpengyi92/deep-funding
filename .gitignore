@@ -10,3 +10,8 @@ test-results/
 artifacts/
 *.log
 worker-configuration.d.ts
+.local/
+private_data/
+user_data/
+*.private.json
+*.private.jsonl

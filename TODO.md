@@ -1,5 +1,43 @@
 # TODO
 
+## P0: Combined RSI Major Update V0.2
+
+- [x] Shared TypeScript RSI services, schemas, versioned benchmark and temporal/missing-data guards.
+- [x] Founder ranking and private funding portfolio comparisons, eight cohort modes and explainable components.
+- [x] CLI command tree, JSON/error mode, atomic local imports and stale-safe exports.
+- [x] Keyboard-first TUI with seven screens, search/details/import/config and candidate evaluation.
+- [x] GUI local-only RSI workspace; no private-data upload implementation.
+- [x] Shenzhen schema/JSONL foundation, synthetic examples and provider requirement overrides.
+- [x] 113 unit/CLI/TUI tests; examples validation included in CI.
+- [ ] Final browser privacy/responsive regression, GitHub CI and deployed route verification.
+- [ ] Publish release announcement and bounded contributor issues.
+
+## P1: RSI Follow-up
+
+- [ ] Licensed, independently labelled temporal/company-group holdout and outcome calibration.
+- [ ] Revision-aware outcome events and multi-process private-store locking.
+- [ ] Cell-width aware CJK terminal rendering and broader real-terminal matrix.
+- [ ] Human-reviewed Shenzhen provider source records; no invented investor facts.
+
+## P0: Capital + Resource Taxonomy V0.2
+
+- [x] Nine browse groups, sixteen categories, capital/resource separation and multi-category entity identity.
+- [x] Canonical JSON profiles, generated schema, runtime consistency checks and source timestamps.
+- [x] Eleven stage labels, separate financing history, evidence-readiness breakdown and discovery recommendations.
+- [x] Ten configurable policies with distinct evidence requirements, financial/credit gates and resource-only support.
+- [x] Funding Explorer, search/filter, profile/trace exports, previews and private workspace import.
+- [x] Preserve unknowns and YC scaffold; reject forged full-profile verification.
+- [x] 75 unit tests, seven local browser/API groups and 60-case fixed matrix.
+- [ ] Verify final V0.2 public deployment and GitHub CI.
+
+## P1: Taxonomy Follow-up
+
+- [ ] Real funding KYC ingestion with claim-level citations, review ownership and eligibility dates.
+- [ ] Parent entity / separate offer profiles; financial periods, proposed loan servicing, covenants and collateral models.
+- [ ] Full canonical-provider form editor (current UI supports legacy forms, read-only imported profiles and typed API updates).
+- [ ] Atomic duplicate-import prevention under concurrent requests; current sequential import is idempotent.
+- [ ] Independently labeled cross-category calibration; discovery scores are not comparable funding probabilities.
+
 ## P0: First Complete Slice
 
 - [x] Typed profiles, eight deterministic agent responsibilities and versioned A2A messages.

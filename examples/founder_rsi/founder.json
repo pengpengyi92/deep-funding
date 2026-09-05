@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "0.2.0",
+  "company": {
+    "name": "AI Agent MVP (fictional)",
+    "description": "Fictional agent infrastructure company building observable execution and evaluation workflows for enterprise teams.",
+    "location": "Shenzhen / Hong Kong",
+    "website": "",
+    "shareForMatching": true,
+    "privateNotes": "Synthetic internal workspace note. Never included in A2A messages.",
+    "evidence": [
+      {
+        "id": "product-01",
+        "field": "product",
+        "label": "Fictional product evidence",
+        "source": "Synthetic demo fixture: product, not an independently verified document.",
+        "provenance": "PROVIDED",
+        "visibility": "MATCH_ONLY",
+        "observedAt": "2026-09-05"
+      },
+      {
+        "id": "traction-01",
+        "field": "traction",
+        "label": "Fictional traction evidence",
+        "source": "Synthetic demo fixture: traction, not an independently verified document.",
+        "provenance": "PROVIDED",
+        "visibility": "MATCH_ONLY",
+        "observedAt": "2026-09-05"
+      },
+      {
+        "id": "team-01",
+        "field": "team",
+        "label": "Fictional team evidence",
+        "source": "Synthetic demo fixture: team, not an independently verified document.",
+        "provenance": "PROVIDED",
+        "visibility": "MATCH_ONLY",
+        "observedAt": "2026-09-05"
+      }
+    ],
+    "stage": "Seed",
+    "companyStage": "pre_seed",
+    "financingRound": "none",
+    "region": "Greater China",
+    "sector": "AI",
+    "raiseUsd": 300000,
+    "capitalTypes": [
+      "Incubator",
+      "Accelerator",
+      "Angel",
+      "VC",
+      "PE",
+      "Bank",
+      "Policy fund",
+      "Strategic investor",
+      "Family office",
+      "Industrial fund"
+    ],
+    "acceptedCategories": [
+      "incubator",
+      "accelerator",
+      "angel",
+      "venture_capital",
+      "corporate_vc",
+      "private_equity",
+      "strategic_investor",
+      "government_fund",
+      "industrial_fund",
+      "grant",
+      "subsidy",
+      "bank",
+      "venture_debt",
+      "family_office",
+      "crowdfunding",
+      "university_fund"
+    ],
+    "mrrUsd": 0,
+    "customers": 5,
+    "teamSize": 2,
+    "technicalTeam": true,
+    "workingProduct": true,
+    "useOfFunds": "Product development, enterprise distribution and recruiting.",
+    "strategicNeeds": [
+      "Mentorship",
+      "Founder network",
+      "Technical expertise"
+    ]
+  },
+  "background": [
+    "Synthetic technical founder"
+  ],
+  "priorStartups": [],
+  "domainExperience": [
+    "AI infrastructure"
+  ],
+  "education": [],
+  "benchmarkCandidate": {
+    "id": "synthetic-candidate",
+    "name": "Fictional Agent Startup",
+    "sector": "AI",
+    "stage": "seed",
+    "snapshotDate": "2026-08-15",
+    "features": {
+      "revenue_usd": 0,
+      "growth": null,
+      "runway": 12,
+      "customers": 0,
+      "technical_experience": 4
+    }
+  },
+  "fundingHistory": [
+    {
+      "id": "history-1",
+      "providerId": "demo-frontier",
+      "opportunityId": "round-one",
+      "date": "2026-09-01",
+      "result": "meeting",
+      "amountUsd": null,
+      "source": "Synthetic interaction",
+      "notes": "Not a real contact"
+    }
+  ]
+}

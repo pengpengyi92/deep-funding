@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.0",
+  "slug": "demo-university",
+  "name": "University Prototype Grant (fictional)",
+  "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+  "entity_type": "program",
+  "categories": ["grant", "university_fund"],
+  "policy_id": "program",
+  "target_stages": ["idea", "pre_company", "prototype", "pre_seed"],
+  "provides_capital": true,
+  "capital_forms": ["grant"],
+  "provides": ["Office space", "GPU compute", "Mentorship"],
+  "geographies": ["Global"],
+  "industries": ["AI", "SaaS"],
+  "exclusions": [],
+  "ticket_usd": {
+    "min": 10000,
+    "max": 5000000
+  },
+  "company_requirements": {
+    "product": "not_required",
+    "traction": "not_required",
+    "revenue": "not_required",
+    "technical_team": "not_required",
+    "minimum_mrr_usd": 0
+  },
+  "evidence_required": [],
+  "terms": null,
+  "application": {
+    "method": null,
+    "url": null,
+    "deadline": null
+  },
+  "source_metadata": {
+    "status": "synthetic",
+    "verified_at": null,
+    "sources": [
+      {
+        "url": "https://example.invalid/deep-funding/demo-university",
+        "accessed_at": "2026-09-05",
+        "claims": ["mandate"]
+      }
+    ],
+    "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+  }
+}

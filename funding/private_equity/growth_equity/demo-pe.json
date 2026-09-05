@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.0",
+  "slug": "demo-pe",
+  "name": "Operating Equity Partners (fictional)",
+  "description": "Synthetic research fixture for testing category-aware matching. Not a real institution, offer or verified source.",
+  "entity_type": "program",
+  "categories": ["private_equity"],
+  "policy_id": "private_equity",
+  "target_stages": ["growth", "mature", "buyout_ready"],
+  "provides_capital": true,
+  "capital_forms": ["equity"],
+  "provides": ["Enterprise distribution"],
+  "geographies": ["Global"],
+  "industries": ["AI", "SaaS"],
+  "exclusions": [],
+  "ticket_usd": {
+    "min": 10000,
+    "max": 5000000
+  },
+  "company_requirements": {
+    "product": "required",
+    "traction": "required",
+    "revenue": "required",
+    "technical_team": "not_required",
+    "minimum_mrr_usd": 0
+  },
+  "evidence_required": [],
+  "terms": null,
+  "application": {
+    "method": null,
+    "url": null,
+    "deadline": null
+  },
+  "source_metadata": {
+    "status": "synthetic",
+    "verified_at": null,
+    "sources": [
+      {
+        "url": "https://example.invalid/deep-funding/demo-pe",
+        "accessed_at": "2026-09-05",
+        "claims": ["mandate"]
+      }
+    ],
+    "notes": "Fictional test fixture. Fixed source date, not automatically refreshed. Scores are screening heuristics, not approval."
+  }
+}
