@@ -1,0 +1,42 @@
+{
+  "name": "deep-funding",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npm run db:local && npm run build && npm run dev",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "format": "prettier --write apps packages tests scripts data docs *.md *.ts *.json .github/workflows/*.yml",
+    "dev": "wrangler dev --port 8791",
+    "dev:web": "vite --host 127.0.0.1 --port 5191",
+    "types": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:local": "wrangler d1 migrations apply deep-funding --local",
+    "db:remote": "wrangler d1 migrations apply deep-funding --remote",
+    "deploy": "npm run build && wrangler deploy",
+    "check": "npm run types && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0",
+    "wrangler": "^4.129.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "pengyi-deep-funding",
+  "main": "apps/api/index.ts",
+  "compatibility_date": "2026-09-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "deep-funding", "database_id": "a52d58d8-2d7b-466e-9e3b-7e1290eb50ee", "migrations_dir": "migrations" }],
+  "ratelimits": [{ "name": "API_LIMITER", "namespace_id": "17361", "simple": { "limit": 120, "period": 60 } }, { "name": "WORKSPACE_LIMITER", "namespace_id": "17362", "simple": { "limit": 12, "period": 60 } }],
+  "observability": { "enabled": true },
+  "triggers": { "crons": ["17 3 * * *"] }
+}
