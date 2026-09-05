@@ -9,7 +9,7 @@
 - [x] Recorded human handoffs, idempotence, info response, stale-result protection.
 - [x] Unit tests and actual Worker/D1 integration test.
 - [x] Verify desktop/mobile browser journeys and inspect screenshots (local and deployed).
-- [ ] Publish public GitHub repository, confirm CI and deploy Worker/D1.
+- [x] Publish public GitHub repository, confirm CI and deploy Worker/D1.
 
 ## P1: Next Measured Upgrades
 

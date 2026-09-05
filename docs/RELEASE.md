@@ -16,6 +16,9 @@ Cloudflare Worker version: `a1ec2619-6a0c-4b21-a9c6-8eca62572454`.
 - Fixed synthetic benchmark recorded in `docs/benchmarks/v0.1-synthetic.json`.
 - Independent D1 database initialized with all nine migration statements. Scheduled expiry cleanup registered. Test workspaces deleted after successful production tests.
 - Dependency audit on installation: zero reported vulnerabilities.
+- Public repository confirmed `PUBLIC`, default branch `main`, with implementation commit `98d619e22c3416daa228a9a9567423aa6d5b848d`.
+- [GitHub CI run 33953139403](https://github.com/pengpengyi92/deep-funding/actions/runs/33953139403) passed in a clean Linux environment (verify job: 59 seconds), including all four browser/API tests. GitHub reports a Node 20 action-runtime deprecation notice for the v4 actions, which it ran on Node 24; no failing checks.
+- Local preview is available with `npm start`; deployment does not depend on the developer machine staying online.
 
 See [adversarial self-review](REVIEW.md) for defects found during testing and remaining limitations. Repository publication/CI results are recorded in the GitHub history and Actions run, not presumed from local tests.
 
