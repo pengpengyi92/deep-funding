@@ -9,8 +9,8 @@
 - [x] GUI local-only RSI workspace; no private-data upload implementation.
 - [x] Shenzhen schema/JSONL foundation, synthetic examples and provider requirement overrides.
 - [x] 113 unit/CLI/TUI tests; examples validation included in CI.
-- [ ] Final browser privacy/responsive regression, GitHub CI and deployed route verification.
-- [ ] Publish release announcement and bounded contributor issues.
+- [x] Final browser privacy/responsive regression, GitHub CI and deployed route verification (113 tests; 9 local + 9 production browser/API groups).
+- [x] Publish release announcement (Discussion #6) and bounded contributor issues (#2-#4); epic #1 closed.
 
 ## P1: RSI Follow-up
 
@@ -28,7 +28,7 @@
 - [x] Funding Explorer, search/filter, profile/trace exports, previews and private workspace import.
 - [x] Preserve unknowns and YC scaffold; reject forged full-profile verification.
 - [x] 75 unit tests, seven local browser/API groups and 60-case fixed matrix.
-- [ ] Verify final V0.2 public deployment and GitHub CI.
+- [x] Verify final V0.2 public deployment and GitHub CI (PR #5 and Worker a9ad14e3).
 
 ## P1: Taxonomy Follow-up
 
