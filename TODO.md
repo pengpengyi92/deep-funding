@@ -9,8 +9,8 @@
 - [x] Synthetic seed, public Funding/Compliance note trees and validated public index.
 - [x] Evidence-labelled disputed case with company response; no association-based penalty.
 - [x] Real process restart, form refresh and local-only privacy tests.
-- [ ] Final V0.3 GitHub CI, production deployment and public-route verification.
-- [ ] Ten-slide PPPT covering functionality, version evolution and verified boundaries.
+- [x] Final V0.3 GitHub CI, production deployment and public-route verification (PR #7).
+- [x] Ten-slide PPPT covering functionality, version evolution and verified boundaries (PPPT project-specific V0.3 overview).
 
 ## P1: V0.3 Follow-up Gates
 

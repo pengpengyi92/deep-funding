@@ -36,6 +36,15 @@ No real profile is automatically imported into the fictional demonstration.
 Cloudflare deployment: 3356dddf-8fdb-4d34-a639-362879d16e82, 2026-09-06.
 Public URLs: /knowledge/funding, /knowledge/compliance and /data-explorer.
 
+PR #7 merged as e791d5b1cf2da64fdad1d6ec358e8d09a83bfa0d. Both branch and PR
+Linux CI jobs passed after removing the security test's implicit dependency on
+a prebuilt frontend. Private file paths now consistently return 404.
+All twelve public/legacy browser groups passed against the deployed Worker.
+All five local private browser groups passed after the final backend restart.
+
+Product overview: ten-slide editable PPTX and speaking notes in the PPPT repo,
+presentations/deep-funding-v0.3/. Private database contents remain excluded.
+
 ## Measurement
 
 Windows / Python 3.11.3, 5 warmups + 25 transactions on one fixed synthetic pair.
