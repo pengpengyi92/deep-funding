@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 base=http://localhost:7860
-curl --fail --retry 15 --retry-connrefused --retry-delay 2 "$base/healthz"
+curl --fail --max-time 2 --retry 15 --retry-all-errors --retry-delay 2 "$base/healthz"
 curl --fail "$base/" > /tmp/deepfunding-index.html
 grep -q 'Deep Funding' /tmp/deepfunding-index.html
 curl --fail "$base/watch.html" > /tmp/deepfunding-watch.html
@@ -18,4 +18,3 @@ test "$status" = 403
 # Read-only upstream connectivity. No public workspace mutation in CI.
 curl --fail --max-time 40 "$base/api/health"
 printf '\nStudio container smoke passed\n'
-
