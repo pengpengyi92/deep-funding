@@ -20,7 +20,7 @@ def main():
         if not target.is_file() or target.read_text(encoding="utf-8") != data:
             raise SystemExit("Public knowledge index is stale. Run python scripts/build_knowledge.py")
     else:
-        target.write_text(data, encoding="utf-8")
+        target.write_text(data, encoding="utf-8", newline="\n")
     print(json.dumps({"records": len(records), "funding_entities": sum(
         r["kind"] == "funding" and r["record_type"] == "entity" for r in records)}, indent=2))
 

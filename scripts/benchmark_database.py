@@ -46,7 +46,7 @@ def main():
         "development_tokens": "UNMEASURED", "funding_accuracy": "UNMEASURED", "calibration": "UNMEASURED",
     }
     target = ROOT / "docs/benchmarks/v0.3-database.json"
-    target.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    target.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({key: value for key, value in report.items() if key != "samples_ms"}, indent=2))
 
 
