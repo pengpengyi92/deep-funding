@@ -83,7 +83,10 @@ def test_local_security(client):
                        headers={"X-Deep-Funding-Local": ""}).status_code == 403
     assert client.post("/api/users", content="x" * 140000, headers={"Content-Type": "application/json"}).status_code == 413
     assert client.get("/data-explorer").headers["cache-control"] == "no-store"
-    assert client.get("/data/deep_funding.db").headers.get("content-type", "").startswith("text/html")
+    for path in ("/data/deep_funding.db", "/.env", "/private_data/profile.json", "/backup.sqlite"):
+        response = client.get(path)
+        assert response.status_code == 404
+        assert b"SQLite format" not in response.content
 
 
 def test_explorer_filters_sort_and_counts(client):

@@ -272,7 +272,9 @@ def create_app(url=None, knowledge_root=ROOT):
 
     @app.get("/{path:path}", include_in_schema=False)
     def frontend(path: str):
-        if path.startswith("api/"):
+        if (path.startswith(("api/", "data/", "private_data/", "user_data/"))
+                or any(part.startswith(".") for part in path.split("/"))
+                or Path(path).suffix.lower() in (".db", ".sqlite", ".sqlite3")):
             raise HTTPException(404)
         dist = (ROOT / "dist").resolve()
         target = (dist / path).resolve()
