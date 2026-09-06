@@ -1,0 +1,1477 @@
+{
+  "version": "0.3.0",
+  "records": [
+    {
+      "id": "hax",
+      "name": "HAX / SOSV",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "accelerator",
+        "venture_capital"
+      ],
+      "stage": [
+        "pre_seed",
+        "seed"
+      ],
+      "industry": [
+        "hardware"
+      ],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [
+        "capital",
+        "engineering",
+        "network"
+      ],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity",
+        "program_stages",
+        "engineering_support"
+      ],
+      "source_urls": [
+        "https://hax.co/faq/",
+        "https://hax.co/program/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# HAX / SOSV\n\n## Overview\nHAX identifies itself as SOSV's hardware investment and program team, with Shenzhen in its global operating network. Program engineering and manufacturing support is documented. Admission, ticket terms and relocation conditions require current confirmation.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\nThe official FAQ identifies pre-seed and seed hard-tech companies. It contains differing investment figures in separate sections, so this record does not choose one as the current ticket. Confirm a dated offer directly.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://hax.co/faq/)\n- [Source 2](https://hax.co/program/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/accelerator/hax.md",
+      "content_hash": "3d0901de9e1ff20dbacef1e8e51054e2f134f0215bb6e3b07a693bfaf5d5a37d"
+    },
+    {
+      "id": "innoangel",
+      "name": "Innoangel / 英诺",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "angel",
+        "venture_capital"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.innoangel.com/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Innoangel / 英诺\n\n## Overview\nThe institution's official page supplies an organizational contact and a Shenzhen address. We retain organization-level sourcing only; individual investors' private preferences are not inferred.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.innoangel.com/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/angel/innoangel.md",
+      "content_hash": "18e07518fe65f06ab596a7a75765546c30c4eb98b5081c95c2dd0d46a52066c7"
+    },
+    {
+      "id": "china-merchants-bank",
+      "name": "China Merchants Bank / 招商银行",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "bank"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://u.ebank.cmbchina.com/CmbBank_GenShell/UI/Help/FirmBank/HTML/Services/Credit%20Management/Inquire%20Credit%20Summary.htm"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# China Merchants Bank / 招商银行\n\n## Overview\nOfficial corporate-banking help documents credit-summary and credit-business inspection. This establishes a corporate-credit service context, not an approval criterion or available loan commitment.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://u.ebank.cmbchina.com/CmbBank_GenShell/UI/Help/FirmBank/HTML/Services/Credit%20Management/Inquire%20Credit%20Summary.htm)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/bank/china-merchants-bank.md",
+      "content_hash": "fb885e68a47bdd660c3f608ab22f43f62fe8c79d0fb15df30da2d8014aa6f050"
+    },
+    {
+      "id": "ping-an-bank",
+      "name": "Ping An Bank / 平安银行",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "bank"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://bank.pingan.com/gongsi/daikuan/index.shtml"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Ping An Bank / 平安银行\n\n## Overview\nThe official corporate-loan page identifies the licensed bank and its lending business. Product eligibility, credit limits, pricing and repayment conditions must be verified separately for the chosen product.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://bank.pingan.com/gongsi/daikuan/index.shtml)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/bank/ping-an-bank.md",
+      "content_hash": "20734a830420434ea36d768a9faf14da5bc2ffab20a2478e889ad0a6f06b3434"
+    },
+    {
+      "id": "venture_debt-template",
+      "name": "venture debt profile template",
+      "kind": "funding",
+      "record_type": "template",
+      "category": [
+        "venture_debt"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# venture debt profile template\n\nNo institution asserted. Required before publishing: legal identity, official URL, dated sources, location, stage/industry mandate, capital/resource mix, evidence requirements, exclusions and application route. Unknown amounts stay null. Templates are excluded from named-entity matching.\n\n## Review\nRecord verifier, scope and review date. Do not infer a family office's private preferences.",
+      "path": "funding-rag-graph/bank/venture-debt/template.md",
+      "content_hash": "5243ea8bf0681b46147d64c92c47883245c9434edb90b61a6e7ce71b8b1f9d39"
+    },
+    {
+      "id": "webank",
+      "name": "WeBank / 微众银行",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "bank"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://sme.webank.com/esp-web/rls/asset/wyd/index.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# WeBank / 微众银行\n\n## Overview\nThe official Weiyedai page describes online working-capital lending for smaller enterprises. This product advertises no collateral requirement. Do not generalize collateral as mandatory for every bank product. Recheck current terms and eligibility.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://sme.webank.com/esp-web/rls/asset/wyd/index.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/bank/webank.md",
+      "content_hash": "f11cddd35e36a1bc66f67c9aa6a7c526081c81e8181f174d6bdf2006e96d44f0"
+    },
+    {
+      "id": "tencent-investment",
+      "name": "Tencent Investment / 腾讯投资",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "corporate_vc",
+        "strategic_investor"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.tencent.com/zh-cn/value-creation-is-pivotal-to-our-investments/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Tencent Investment / 腾讯投资\n\n## Overview\nTencent's 2020 strategy statement describes value creation and support for investees. This is historical strategic context. It does not verify a currently open program, ticket range or a guarantee of customer introductions.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.tencent.com/zh-cn/value-creation-is-pivotal-to-our-investments/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/corporate-vc/tencent-investment.md",
+      "content_hash": "b4fc0fbb0afbcd70a7bba215642c4850327e376d999d663c97bbe64a748c1b83"
+    },
+    {
+      "id": "family_office-template",
+      "name": "family office profile template",
+      "kind": "funding",
+      "record_type": "template",
+      "category": [
+        "family_office"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# family office profile template\n\nNo institution asserted. Required before publishing: legal identity, official URL, dated sources, location, stage/industry mandate, capital/resource mix, evidence requirements, exclusions and application route. Unknown amounts stay null. Templates are excluded from named-entity matching.\n\n## Review\nRecord verifier, scope and review date. Do not infer a family office's private preferences.",
+      "path": "funding-rag-graph/family-office/template.md",
+      "content_hash": "19541339d322a0bdc88df0c588664b3608b0680239bc8dbe36f29ff287992f3b"
+    },
+    {
+      "id": "shenzhen-angel-fof",
+      "name": "Shenzhen Angel Fund of Funds / 深圳天使母基金",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "government_fund",
+        "angel"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_11363016.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Shenzhen Angel Fund of Funds / 深圳天使母基金\n\n## Overview\nThe city describes a fund-of-funds system promoting early technology investment. It must not be presented as a direct angel cheque available to every founder; verify the relevant underlying fund or program.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/post_11363016.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/government-fund/shenzhen-angel-fof.md",
+      "content_hash": "b2160e1a3df9a2aa574e146a422819103a92533133286e9825d336034f285945"
+    },
+    {
+      "id": "shenzhen-venue-subsidy",
+      "name": "Shenzhen startup venue subsidy / 创业场租补贴",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "grant"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://hrss.sz.gov.cn/ztfw/gaojyzt/cy/zzcyfcbt/cyczbt/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Shenzhen startup venue subsidy / 创业场租补贴\n\n## Overview\nThe municipal human-resources portal provides a startup venue-subsidy entry point. Eligibility and deadlines are program-specific. Subsidies are not equity investments; never assume entitlement from location alone.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://hrss.sz.gov.cn/ztfw/gaojyzt/cy/zzcyfcbt/cyczbt/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/grant/shenzhen-venue-subsidy.md",
+      "content_hash": "df4849441b3194d9a9bebce8fe2a4007201b9354f694ec69bf5228306fb0ff1f"
+    },
+    {
+      "id": "tsinghua-ispace",
+      "name": "Tsinghua Shenzhen i-Space / 清华深圳i-Space",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "incubator"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://stic.sz.gov.cn/kjfw/cxzt/kjqyfhqmd/index.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Tsinghua Shenzhen i-Space / 清华深圳i-Space\n\n## Overview\nThe city lists Tsinghua Shenzhen i-Space among innovation/incubation carriers. Access rules, university affiliation requirements and current services remain to be verified with the operator.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://stic.sz.gov.cn/kjfw/cxzt/kjqyfhqmd/index.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/incubator/tsinghua-ispace.md",
+      "content_hash": "e07f8d2a42e944b9c2d1f1c0642b0ec690e8139dc73f5305b3c6bbdd0311bdd9"
+    },
+    {
+      "id": "tus-kstar-shenzhen",
+      "name": "Tus K-Star Shenzhen Bay / 启迪K栈深圳湾",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "incubator"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://stic.sz.gov.cn/kjfw/cxzt/kjqyfhqmd/index.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Tus K-Star Shenzhen Bay / 启迪K栈深圳湾\n\n## Overview\nThe Shenzhen science and technology bureau lists this maker-space operator. Listing proves recognized incubation presence, not a cash-investment commitment, current vacancies or an active application window.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://stic.sz.gov.cn/kjfw/cxzt/kjqyfhqmd/index.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/incubator/tus-kstar-shenzhen.md",
+      "content_hash": "98f4fe0d2994f1cdf2e397a8ed6e88d9e111c8b7f90bd7cd9e3b231696152f19"
+    },
+    {
+      "id": "shenzhen-major-industry",
+      "name": "Shenzhen Major Industry Ecosystem Fund / 重投一号",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "industrial_fund",
+        "government_fund"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/mpost_12902513.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Shenzhen Major Industry Ecosystem Fund / 重投一号\n\n## Overview\nA Shenzhen government announcement reports establishment of the major-industry ecosystem fund and identifies its manager. A fund's announced size is not an applicant ticket or promise of capital. Current application channels remain unknown.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.sz.gov.cn/cn/xxgk/zfxxgj/bmdt/content/mpost_12902513.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/industrial-fund/shenzhen-major-industry.md",
+      "content_hash": "321d33a14253223ecf491834d499665fefafa49da9ac1fce072d7690d91d0b01"
+    },
+    {
+      "id": "cdh",
+      "name": "CDH Investments / 鼎晖投资",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "private_equity",
+        "growth_equity"
+      ],
+      "stage": [
+        "growth"
+      ],
+      "industry": [
+        "consumer"
+      ],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.cdhfund.com/pe/",
+        "https://www.cdhfund.com/bf/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# CDH Investments / 鼎晖投资\n\n## Overview\nCDH describes private-equity growth and buyout activity. The separate CDH Baifu page lists a Shenzhen office. This is group-level Shenzhen relevance, not proof that every CDH fund accepts Shenzhen applications.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.cdhfund.com/pe/)\n- [Source 2](https://www.cdhfund.com/bf/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/pe/cdh.md",
+      "content_hash": "481351f3f218511f42938f21a62e145cce140987dd04bef62e291126788be2da"
+    },
+    {
+      "id": "tiantu",
+      "name": "Tiantu Capital / 天图投资",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "private_equity"
+      ],
+      "stage": [],
+      "industry": [
+        "consumer"
+      ],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.sse.com.cn/disclosure/bond/announcement/company/c/2924338401763250.pdf"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Tiantu Capital / 天图投资\n\n## Overview\nIssuer disclosure describes private-equity fund management and own-capital equity investment. This is historical business-model evidence, not a claim about current open allocations or investment terms.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.sse.com.cn/disclosure/bond/announcement/company/c/2924338401763250.pdf)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/pe/tiantu.md",
+      "content_hash": "899e61e2fc3bcb413d9b01c295dc157688e846f9f7039a5661ebf963de927435"
+    },
+    {
+      "id": "strategic_investor-template",
+      "name": "strategic investor profile template",
+      "kind": "funding",
+      "record_type": "template",
+      "category": [
+        "strategic_investor"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# strategic investor profile template\n\nNo institution asserted. Required before publishing: legal identity, official URL, dated sources, location, stage/industry mandate, capital/resource mix, evidence requirements, exclusions and application route. Unknown amounts stay null. Templates are excluded from named-entity matching.\n\n## Review\nRecord verifier, scope and review date. Do not infer a family office's private preferences.",
+      "path": "funding-rag-graph/strategic-investor/template.md",
+      "content_hash": "a3dd2070165cd1015a080f95cad734fbd519411e1ebcff6512d79be9e51b11bd"
+    },
+    {
+      "id": "funding-types",
+      "name": "Capital and Resource Taxonomy",
+      "kind": "funding",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Capital and Resource Taxonomy\n\nangel, incubator, accelerator, pre_seed_vc, seed_vc, venture_capital, growth_vc, private_equity, growth_equity, bank, venture_debt, industrial_fund, government_fund, strategic_investor, corporate_vc, family_office, grant, university_fund, other.\n\nMultiple categories are allowed. Incubation is a service model; VC/PE describes capital activity. Fund-of-funds, university support and subsidies need distinct channels. Resources and capital are independent. This is an internal classification, not a licensing determination.",
+      "path": "funding-rag-graph/taxonomy/funding-types.md",
+      "content_hash": "1fc554d926dd18d0162f0d2db4f00200b441dd6a34d1646a33c9beefc92bc348"
+    },
+    {
+      "id": "matching-dimensions",
+      "name": "Matching Dimensions",
+      "kind": "funding",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Matching Dimensions\n\nStage, industry, geography, funding need, ticket currency, founder evidence, team, traction, financial capacity and risk review.\n\nUnknown is not a positive match. Banks need repayment evidence. RAG retrieves context, not authorization. V0.3 uses known metadata dimensions and emits coverage. Unmeasured quality/risk stay null.",
+      "path": "funding-rag-graph/taxonomy/matching-dimensions.md",
+      "content_hash": "ea380a3fd240412d9ce81287babdda516b3a6bc17822619dcdde650f85a52a51"
+    },
+    {
+      "id": "startup-stages",
+      "name": "Startup Stages",
+      "kind": "funding",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Startup Stages\n\nidea, pre_seed, seed, series_a, series_b, growth, mature, pre_ipo, public.\n\nStage needs evidence. Revenue is nullable, not zero by default. Maturity and round labels differ; banks/PE do not fit startup-only ranking.",
+      "path": "funding-rag-graph/taxonomy/startup-stages.md",
+      "content_hash": "1a21877b2de9fb389e95a28a1bbeef37da1d005f3b24feee17d951e47f573b6d"
+    },
+    {
+      "id": "sustech-innovation-fund",
+      "name": "SUSTech Innovation and Entrepreneurship Fund / 南科大创新创业基金",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "university_fund"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://sustechef.sustech.edu.cn/projects/detail/69.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# SUSTech Innovation and Entrepreneurship Fund / 南科大创新创业基金\n\n## Overview\nThe university foundation lists an innovation and entrepreneurship fundraising project. This is not verified as an open venture fund for external founders; applicant access and award mechanism remain unknown.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://sustechef.sustech.edu.cn/projects/detail/69.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/university-fund/sustech-innovation-fund.md",
+      "content_hash": "9b37e306ac5a81f48f22cf81db0551850c7882c27289c869c2164233475957ab"
+    },
+    {
+      "id": "fortune-capital",
+      "name": "Fortune Capital / 达晨财智",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "venture_capital"
+      ],
+      "stage": [],
+      "industry": [
+        "information_technology",
+        "manufacturing",
+        "healthcare",
+        "consumer"
+      ],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://www.fortunevc.com/index/about.html",
+        "https://jr.sz.gov.cn/sjrb/ztzl/szctr/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Fortune Capital / 达晨财智\n\n## Overview\nThe institution describes a venture-capital business spanning information technology, intelligent manufacturing, healthcare and consumer-related sectors. Current fund capacity, ticket range and application eligibility need direct verification.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://www.fortunevc.com/index/about.html)\n- [Source 2](https://jr.sz.gov.cn/sjrb/ztzl/szctr/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/vc/early-stage/fortune-capital.md",
+      "content_hash": "549cc4a49dacb0fa7bdbb9d48e4cecb6f1288520b9aedc994dc86e2116236808"
+    },
+    {
+      "id": "pine-capital",
+      "name": "Green Pine Capital / 松禾资本",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "venture_capital"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://jr.sz.gov.cn/sjrb/ztzl/szctr/",
+        "https://www.pinevc.com.cn/en/article/377.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Green Pine Capital / 松禾资本\n\n## Overview\nThe municipal source identifies this local VC. Its 2020 article discusses electronic-information and AI investment themes. Those historical themes are not treated as a current binding policy.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://jr.sz.gov.cn/sjrb/ztzl/szctr/)\n- [Source 2](https://www.pinevc.com.cn/en/article/377.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/vc/early-stage/pine-capital.md",
+      "content_hash": "cb41fd7632809df255fae9671baaed0ef8efb7cfb88f95f2d1a8226c7c0919b1"
+    },
+    {
+      "id": "scgc",
+      "name": "Shenzhen Capital Group / 深创投",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "venture_capital"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://jr.sz.gov.cn/sjrb/ztzl/szctr/"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Shenzhen Capital Group / 深创投\n\n## Overview\nThe Shenzhen municipal finance office identifies SCGC as a local venture-capital institution. This record verifies institutional identity and Shenzhen relevance only; no fund-specific mandate is verified.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://jr.sz.gov.cn/sjrb/ztzl/szctr/)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/vc/early-stage/scgc.md",
+      "content_hash": "9921e2b785f14ddbeef3788259e0b38685a364c516936d1ceb25d5aee24a5cd7"
+    },
+    {
+      "id": "growth_vc-template",
+      "name": "growth vc profile template",
+      "kind": "funding",
+      "record_type": "template",
+      "category": [
+        "growth_vc"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# growth vc profile template\n\nNo institution asserted. Required before publishing: legal identity, official URL, dated sources, location, stage/industry mandate, capital/resource mix, evidence requirements, exclusions and application route. Unknown amounts stay null. Templates are excluded from named-entity matching.\n\n## Review\nRecord verifier, scope and review date. Do not infer a family office's private preferences.",
+      "path": "funding-rag-graph/vc/growth/template.md",
+      "content_hash": "179bb1be32497462b8d2ee9b037bb82a354b9722c26edbef060e7199f9569780"
+    },
+    {
+      "id": "pre_seed_vc-template",
+      "name": "pre seed vc profile template",
+      "kind": "funding",
+      "record_type": "template",
+      "category": [
+        "pre_seed_vc"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# pre seed vc profile template\n\nNo institution asserted. Required before publishing: legal identity, official URL, dated sources, location, stage/industry mandate, capital/resource mix, evidence requirements, exclusions and application route. Unknown amounts stay null. Templates are excluded from named-entity matching.\n\n## Review\nRecord verifier, scope and review date. Do not infer a family office's private preferences.",
+      "path": "funding-rag-graph/vc/pre-seed/template.md",
+      "content_hash": "ba712d65c812dac3ec84ddde4767c7843379ab5fa5db08b8b3c284bdb9ae3895"
+    },
+    {
+      "id": "cowin-capital",
+      "name": "Cowin Capital / 同创伟业",
+      "kind": "funding",
+      "record_type": "entity",
+      "category": [
+        "venture_capital"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [
+        "Shenzhen"
+      ],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "research_seed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "identity_and_source_statement_only"
+      ],
+      "source_urls": [
+        "https://jr.sz.gov.cn/sjrb/ztzl/szctr/",
+        "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/post_12243400.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [
+        "funding-types",
+        "matching-dimensions"
+      ],
+      "markdown": "# Cowin Capital / 同创伟业\n\n## Overview\nThe city identifies Cowin as a local VC. A government report describes a 2025 angel-plus robotics investment. A single historical deal is evidence of activity, not an evergreen stage or sector mandate.\n\n## Investment Focus / Stage\nTags summarize cited material. An empty stage list means unknown, not all stages. Historical deals do not prove current preference.\n\n## Typical Company / Required Evidence\nResearch checklist, not a reported mandate: legal identity, product evidence, funding purpose and ownership. For lenders, verify repayment, debt capacity, statements, credit history and product-specific security.\n\n## Matching Dimensions / Known Preferences\nUse the verified scope above. Financial thresholds, ticket size and availability remain null until a dated source supports them. Resource availability also needs program-specific confirmation.\n\n## Application / Contact\nUse the official source to identify the correct program. The retriever performs no outreach.\n\n## Sources\n- [Source 1](https://jr.sz.gov.cn/sjrb/ztzl/szctr/)\n- [Source 2](https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/post_12243400.html)\n\n## Notes\nThe date records inspection of this limited source scope, not endorsement or open applications. Public research only.",
+      "path": "funding-rag-graph/vc/seed/cowin-capital.md",
+      "content_hash": "bc68c6c1762729807fd593847cceb92665ba69e006de9105545dd7ce0fa862c7"
+    },
+    {
+      "id": "aml-review",
+      "name": "AML / KYC diligence template",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "aml_kyc"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "aml_kyc"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# AML / KYC diligence template\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nVerify identity, beneficial owners, source of funds, applicable duties and escalation. No automatic screening service.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\nInternal research checklist, not a statement of law.",
+      "path": "compliance-rag-graph/aml-kyc/aml-review.md",
+      "content_hash": "2c82200df9e88549028754f072670abac86b9a440316f110a6dc6e8e63a76165"
+    },
+    {
+      "id": "anti-corruption-review",
+      "name": "Anti-corruption diligence template",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "anti_corruption"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "anti_corruption"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Anti-corruption diligence template\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nCheck gifts, intermediaries, procurement conflicts, approvals and whistleblowing controls.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\nInternal research checklist, not a statement of law.",
+      "path": "compliance-rag-graph/anti-corruption/anti-corruption-review.md",
+      "content_hash": "f86fc3693304c20f7605c9ec2f2784788e118472aa48ffd8b6ec09fcc191904f"
+    },
+    {
+      "id": "privacy-review",
+      "name": "Data privacy review",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "data_privacy"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [
+        "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm?eqid=c1b27c46000007a10000000664659814"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "personal_data"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Data privacy review\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nRecord purpose, lawful basis, minimization, retention, access controls and cross-border review. Consult jurisdiction-specific counsel.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\n- [Reference framework](https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm?eqid=c1b27c46000007a10000000664659814)",
+      "path": "compliance-rag-graph/data-privacy/privacy-review.md",
+      "content_hash": "8e508ba43f2a592a0b121d7b4a6940499dd3956e6b56aa4a0fa6c1148f414a2c"
+    },
+    {
+      "id": "employment-review",
+      "name": "Employment and equity-award review",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "employment"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "employment",
+        "equity_awards"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Employment and equity-award review\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nEmployment contracts; termination records; equity awards; litigation status; qualified legal review.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\nInternal research checklist, not a statement of law.",
+      "path": "compliance-rag-graph/employment/employment-review.md",
+      "content_hash": "db9e9f291caa75e1af1b00500dc35bc86a2ac0092cb0181e138a88276bc3b7a9"
+    },
+    {
+      "id": "xiaohongshu-disputed-2026",
+      "name": "Xiaohongshu employment / IPO media dispute",
+      "kind": "compliance",
+      "record_type": "case",
+      "category": [
+        "employment",
+        "ipo_listing"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "disputed",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "media_report_and_reported_company_response"
+      ],
+      "source_urls": [
+        "https://companies.caixin.com/m/2026-07-22/102466941.html"
+      ],
+      "last_verified": "2026-09-06",
+      "company": "Xiaohongshu",
+      "jurisdiction": [
+        "China",
+        "Hong Kong"
+      ],
+      "evidence_level": "media_report",
+      "risk_tags": [
+        "employment",
+        "equity_awards",
+        "ipo_listing"
+      ],
+      "claims": [
+        {
+          "type": "media_report",
+          "text": "Caixin reported on 22 July 2026 that IPO-related rumours and a former employee's complaint were circulating.",
+          "source_url": "https://companies.caixin.com/m/2026-07-22/102466941.html"
+        },
+        {
+          "type": "company_statement",
+          "text": "According to Caixin, Xiaohongshu said the currently circulating IPO information was untrue.",
+          "source_url": "https://companies.caixin.com/m/2026-07-22/102466941.html"
+        },
+        {
+          "type": "disputed_claim",
+          "text": "The assertion that a complaint blocked an IPO is disputed, not a verified regulatory conclusion in this record.",
+          "source_url": "https://companies.caixin.com/m/2026-07-22/102466941.html"
+        },
+        {
+          "type": "analysis",
+          "text": "Request relevant employment, equity-award and litigation documents. Association does not establish applicant wrongdoing.",
+          "source_url": null
+        }
+      ],
+      "related_ids": [
+        "employment-review",
+        "governance-review"
+      ],
+      "markdown": "# Xiaohongshu: disputed media case\n\n## What Happened / Confirmed Facts\nThe linked Caixin article dated 22 July 2026 was inspected. Reporting exists; underlying allegations were not independently adjudicated here.\n\n## Allegations / Disputed Claims\nClaims connecting an employee complaint to an IPO obstacle remain disputed.\n\n## Company Response\nRead the reported denial alongside the media claims above.\n\n## Regulatory / Legal Context\nNo primary judgment or listing decision was verified here. Do not classify this as a confirmed violation or blocked IPO.\n\n## Potential Funding Impact\nInternal analysis: documentation questions may warrant human diligence. No penalty applies to unrelated companies.\n\n## Agent Lessons / Due Diligence Questions\n- Are contracts and equity-award agreements complete?\n- Which claims have primary evidence?\n- What is the response and procedural status?\n- Does counsel identify a material disclosure issue?\n\n## Sources\n- [Caixin original reporting](https://companies.caixin.com/m/2026-07-22/102466941.html)",
+      "path": "compliance-rag-graph/employment/xiaohongshu-employment-ipo-compliance-disputed-case.md",
+      "content_hash": "f433a5b2b41af13b7de7989777f4bca7f9381cbcf6fa904a3d8650cdfc147ba6"
+    },
+    {
+      "id": "financial-review",
+      "name": "Financial evidence review",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "financial_reporting"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "revenue_quality"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Financial evidence review\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nReconcile revenue, cash receipts and statements. Verify currency, period, debt and audit scope.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\nInternal research checklist, not a statement of law.",
+      "path": "compliance-rag-graph/financial-reporting/financial-review.md",
+      "content_hash": "80a219881fa14b79fe4d88df757ae73154bc1aa0726e4c7bd3d864bc2723d1a1"
+    },
+    {
+      "id": "governance-review",
+      "name": "Governance and ownership review",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "governance"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [
+        "https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "governance"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Governance and ownership review\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nCap table; board approvals; beneficial ownership; related-party controls; authorized signatories.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\n- [Reference framework](https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en)",
+      "path": "compliance-rag-graph/governance/governance-review.md",
+      "content_hash": "1d7472ed103c6f03dd7f47c2be2095a5df21fe40992c1bc26a9ac92adec298d4"
+    },
+    {
+      "id": "listing-review",
+      "name": "Listing disclosure review template",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "ipo_listing"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [
+        "https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "ipo_listing"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Listing disclosure review template\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nIdentify exchange, rules, sponsor, audited track record, ownership and material litigation disclosures.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\n- [Reference framework](https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en)",
+      "path": "compliance-rag-graph/ipo-listing/listing-review.md",
+      "content_hash": "1c90955e763608e9e88d19de933afc0af9c255d51de9dc43ae44f886bcb75e1f"
+    },
+    {
+      "id": "positive-governance",
+      "name": "Positive governance benchmark",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "positive_benchmarks"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [
+        "https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en"
+      ],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "governance"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Positive governance benchmark\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nDocument board oversight, accountable owners, dated disclosures and remediation. This is a checklist, not certification.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\n- [Reference framework](https://www.hkex.com.hk/Listing/Sustainability/ESG-Academy/Rules-and-Regulations?sc_lang=en)",
+      "path": "compliance-rag-graph/positive-benchmarks/positive-governance.md",
+      "content_hash": "bd4dfddc53a250625a967ecf893c98f3d0c2c837ee3938dcc59e5256b5f7b1ae"
+    },
+    {
+      "id": "luckin-sec-2020",
+      "name": "Luckin Coffee: SEC enforcement reference",
+      "kind": "compliance",
+      "record_type": "case",
+      "category": [
+        "financial_reporting",
+        "regulatory_actions"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "regulatory_action",
+      "verification_status": "verified_scope",
+      "verified_scope": [
+        "SEC_public_enforcement_release"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-24987"
+      ],
+      "last_verified": "2026-09-06",
+      "company": "Luckin Coffee",
+      "jurisdiction": [
+        "United States"
+      ],
+      "evidence_level": "official_source",
+      "risk_tags": [
+        "revenue_quality",
+        "related_party_transactions"
+      ],
+      "claims": [
+        {
+          "type": "confirmed_fact",
+          "text": "The SEC published a 2020 enforcement release describing charges against Luckin Coffee.",
+          "source_url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-24987"
+        },
+        {
+          "type": "allegation",
+          "text": "The SEC complaint alleged fabricated sales and misstated financial performance.",
+          "source_url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-24987"
+        },
+        {
+          "type": "analysis",
+          "text": "A regulatory complaint and adjudicated finding differ. Review the disposition before a legal conclusion.",
+          "source_url": null
+        }
+      ],
+      "related_ids": [],
+      "markdown": "# Luckin Coffee: financial-reporting diligence\n\n## What Happened\nThe SEC's dated enforcement release is the primary record.\n\n## Confirmed Facts\nThe regulator published charges. Allegations retain their label.\n\n## Company Response / Procedural Outcome\nConsult the source and underlying filings. This is not a complete litigation history.\n\n## Agent Lessons\nReconcile revenue to cash receipts, independent confirmations and related-party records.\n\n## Potential Funding Impact\nAudit questions only, without guilt-by-association penalties.\n\n## Sources\n- [SEC release](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-24987)",
+      "path": "compliance-rag-graph/regulatory-actions/luckin-sec-2020.md",
+      "content_hash": "52ced9a0ad024509a2a74222048b97166c8daa8fb56f2a297656dd55a44ac5c6"
+    },
+    {
+      "id": "sanctions-review",
+      "name": "Sanctions diligence template",
+      "kind": "compliance",
+      "record_type": "template",
+      "category": [
+        "sanctions"
+      ],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "review_template",
+      "verification_status": "template",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "template",
+      "risk_tags": [
+        "sanctions"
+      ],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Sanctions diligence template\n\n## Scope\nInternal evidence-request template. No named-company misconduct asserted.\n\n## Due Diligence Questions\nUse current official lists and ownership/control rules. Manual legal review required. This template computes no list match.\n\n## Agent Output\nrequires_review. The company supplies evidence for human inspection. Unknown stays unknown.\n\n## Sources\nInternal research checklist, not a statement of law.",
+      "path": "compliance-rag-graph/sanctions/sanctions-review.md",
+      "content_hash": "5e948d2c8c11b20912f6b241ce87e1933a19f6b65e0a8e2e52d042b8c07015f4"
+    },
+    {
+      "id": "compliance-compliance-types",
+      "name": "Compliance Types",
+      "kind": "compliance",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Compliance Types\n\nemployment; governance; financial_reporting; ipo_listing; data_privacy; anti_corruption; aml_kyc; sanctions; regulatory_actions; positive_benchmarks. These route evidence requests, not blacklists.",
+      "path": "compliance-rag-graph/taxonomy/compliance-types.md",
+      "content_hash": "46c5ae8fc6d5d906e8bb045694731a440e75c025b1d09c21abf4e297edbdf26f"
+    },
+    {
+      "id": "compliance-evidence-levels",
+      "name": "Evidence Levels",
+      "kind": "compliance",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Evidence Levels\n\nofficial_source; regulatory_finding; company_statement; media_report; unverified; template. Each claim also carries confirmed_fact, regulatory_finding, company_statement, media_report, allegation, disputed_claim or analysis. A regulator's allegation stays an allegation.",
+      "path": "compliance-rag-graph/taxonomy/evidence-levels.md",
+      "content_hash": "0dd728b111a95fdecca49525c6091f9dceec4d56c5eb610fdbfe3689d8b4f714"
+    },
+    {
+      "id": "compliance-severity",
+      "name": "Severity",
+      "kind": "compliance",
+      "record_type": "taxonomy",
+      "category": [],
+      "stage": [],
+      "industry": [],
+      "location": [],
+      "provides": [],
+      "ticket_min": null,
+      "ticket_max": null,
+      "currency": null,
+      "status": "reference",
+      "verification_status": "reference",
+      "verified_scope": [],
+      "source_urls": [],
+      "last_verified": "2026-09-06",
+      "company": null,
+      "jurisdiction": [],
+      "evidence_level": "official_source",
+      "risk_tags": [],
+      "claims": [],
+      "related_ids": [],
+      "markdown": "# Severity\n\ninfo: context. review: missing evidence. material: verified applicable issue needs specialist review. No association alone establishes material risk.",
+      "path": "compliance-rag-graph/taxonomy/severity.md",
+      "content_hash": "d17902164cf75290497b92fb53be8a1d996726d8a89a2c4bd21028f104d2e650"
+    }
+  ]
+}

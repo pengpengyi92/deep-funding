@@ -13,6 +13,7 @@ import {
   Route,
   Link,
   NavLink,
+  Navigate,
   useLocation,
   useNavigate,
   useParams,
@@ -59,6 +60,8 @@ import { compareMatches, matchIsStale } from "../../../packages/matching";
 import { FundingExplorer } from "./funding-explorer";
 import { RsiWorkspace } from "./rsi-workspace";
 import { CompanyReadinessFields } from "./company-readiness-fields";
+import { KnowledgeWorkspace } from "./knowledge-workspace";
+import { DatabaseWorkspace } from "./database-workspace";
 import { fundingProfileOf } from "../../../packages/knowledge/adapter";
 import { stageOf } from "../../../packages/knowledge/readiness";
 
@@ -201,19 +204,37 @@ function DownloadButton({ data, name }: { data: unknown; name: string }) {
   );
 }
 function Header() {
+  const local =
+    document
+      .querySelector('meta[name="deep-funding-runtime"]')
+      ?.getAttribute("content") === "local-private";
+  const runtimeLink = (to: string, title: string) =>
+    local ? (
+      <a
+        href={`https://pengyi-deep-funding.pengpengyi92.workers.dev${to}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {title}
+      </a>
+    ) : (
+      <NavLink to={to}>{title}</NavLink>
+    );
   return (
     <header className="header">
       <Link to="/" className="brand">
         <Workflow size={25} />
         <span>
-          Deep Funding<span className="version"> / 0.2</span>
+          Deep Funding<span className="version"> / 0.3</span>
         </span>
       </Link>
       <nav aria-label="Main navigation">
-        <NavLink to="/founder/dashboard">Company</NavLink>
-        <NavLink to="/funding/dashboard">Capital</NavLink>
-        <NavLink to="/funding/explorer">Explorer</NavLink>
+        {runtimeLink("/founder/dashboard", "Company")}
+        {runtimeLink("/funding/dashboard", "Capital")}
+        {runtimeLink("/funding/explorer", "Explorer")}
         <NavLink to="/rsi">RSI</NavLink>
+        <NavLink to="/knowledge/funding">Knowledge</NavLink>
+        <NavLink to="/data-explorer">Database</NavLink>
         <NavLink to="/about">Protocol</NavLink>
         <a
           className="github-link"
@@ -234,7 +255,7 @@ function Footer() {
         <Workflow size={19} /> Deep Funding
       </Link>
       <span>Open source. Evidence first. Humans decide.</span>
-      <span>Fictional demo · No investment advice</span>
+      <span>Public sources / fictional demos · No investment advice</span>
     </footer>
   );
 }
@@ -1842,9 +1863,28 @@ function App() {
       )}
       <div id="content">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route
+            path="/"
+            element={
+              document.querySelector('meta[name="deep-funding-runtime"]') ? (
+                <Navigate to="/data-explorer" replace />
+              ) : (
+                <Landing />
+              )
+            }
+          />
           <Route path="/about" element={<About />} />
           <Route path="/rsi" element={<RsiWorkspace />} />
+          <Route
+            path="/knowledge/funding"
+            element={<KnowledgeWorkspace kind="funding" />}
+          />
+          <Route
+            path="/knowledge/compliance"
+            element={<KnowledgeWorkspace kind="compliance" />}
+          />
+          <Route path="/data-explorer" element={<DatabaseWorkspace />} />
+          <Route path="/admin/database" element={<DatabaseWorkspace />} />
           <Route
             path="/funding/explorer"
             element={
