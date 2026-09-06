@@ -24,4 +24,3 @@ jobs:
       - run: sh mota/studio/smoke.sh
       - if: always()
         run: docker logs deepfunding-studio
-

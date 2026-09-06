@@ -9,4 +9,3 @@ case "$STUDIO_PUBLIC_ORIGIN" in
   http://localhost:*|http://127.0.0.1:*|https://*) ;;
   *) echo "Non-local Studio origins must use HTTPS" >&2; exit 1 ;;
 esac
-

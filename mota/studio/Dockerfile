@@ -5,4 +5,3 @@ COPY 15-validate-origin.sh /docker-entrypoint.d/15-validate-origin.sh
 RUN chmod +x /docker-entrypoint.d/15-validate-origin.sh
 ENV STUDIO_PUBLIC_ORIGIN=https://unconfigured.invalid
 EXPOSE 7860
-
