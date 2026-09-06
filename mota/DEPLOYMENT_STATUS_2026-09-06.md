@@ -12,7 +12,10 @@ Timestamp: 2026-09-06T13:48:00+08:00
   魔搭托管静态前端，API 仍使用现有 Cloudflare 公共演示后端。
   这不是迁移 SQLite，也不是独立魔搭后端。
 - Windows Docker Linux daemon 当前未运行。容器验证交给单独 Linux CI，
-  其结果需要读取，不能把配置文件存在当作运行成功。
+  已读取 Linux CI 结果：容器构建、首页、视频 Range、安全拒绝和上游
+  health 检查均通过。运行记录：
+  https://github.com/pengpengyi92/deep-funding/actions/runs/34015044262
+  这仍不等于魔搭创空间已部署；真实域名下的会话和写入需上线后验收。
 
 ## 历史文档校准
 
@@ -35,6 +38,8 @@ Timestamp: 2026-09-06T13:48:00+08:00
 
 - `exports/PPPT_Deep_Funding_v0.3_Overview_10slides.pptx`
 - `exports/PPPT_Deep_Funding_v0.3_Overview_ZH_10slides.pptx`
+
+PPPT PR #3 已合并，main 为 b79e0b4；中英文两份的远端 blob 已核验。
 
 公共演示视频为 28 秒、1080p30，保留原始本机母版；
 网页版本约 17.89 MB，支持拖动进度和完整画面。

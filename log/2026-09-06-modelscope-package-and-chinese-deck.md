@@ -23,3 +23,12 @@ Follow-up after the Cloudflare film deployment:
   stays unchanged. Chinese commit: 9000e09, PPPT PR #3.
 
 No changes to private SQLite access, trading, real-world outreach or payments.
+
+## Verification Follow-up
+
+2026-09-06T13:54:00+08:00: the first container probe raced NGINX startup.
+The readiness probe now tolerates transient connection resets with bounded
+retries; it still fails a persistent startup error. Linux Docker build and all
+fixed smoke checks passed at commit 5c53cd2 (run 34015044262).
+ModelScope account authentication and actual Studio deployment remain pending.
+PPPT PR #3 merged to main b79e0b4; Chinese remote/local blob IDs match exactly.

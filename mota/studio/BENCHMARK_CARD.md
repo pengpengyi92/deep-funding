@@ -26,7 +26,11 @@ Linux CI builds the actual Docker image and runs this fixed protocol.
 
 Local public packaging: 9 assets, 21,411,647 bytes. Manifest hashes are written
 under .local/modelscope-studio-package. TypeScript: 132 tests; typecheck passed.
-Container and actual Studio measurements are pending, not inferred.
+Linux container build and fixed smoke protocol passed:
+https://github.com/pengpengyi92/deep-funding/actions/runs/34015044262
+(tested commit 5c53cd2). Actual Studio deployment, configured-origin workspace
+writes, cookie persistence in the ModelScope iframe and region egress remain
+unverified. Container success is not ModelScope deployment success.
 
 ## Trade-off
 
@@ -37,5 +41,5 @@ Container latency, availability, cost and audience effectiveness: UNMEASURED.
 
 ## Next Action
 
-Read Linux CI results, authenticate ModelScope, confirm account and free
+Authenticate ModelScope, confirm account and free
 resource availability, deploy, and test the real app origin/cookie workflow.
