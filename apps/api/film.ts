@@ -1,7 +1,7 @@
 // Static Assets can ignore Range. Adapt the single published film with bounded streaming.
 export async function serveFilm(
   request: Request,
-  assets: Fetcher,
+  assets: { fetch(request: Request): Promise<Response> },
   knownSize?: number,
 ): Promise<Response> {
   if (!["GET", "HEAD"].includes(request.method))

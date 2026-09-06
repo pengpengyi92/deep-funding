@@ -1,5 +1,14 @@
 # TODO
 
+## P0: ModelScope and Chinese Presentation
+
+- [x] Preserve the English PPTX and produce a separate Chinese 10-slide PPPT.
+- [x] Prepare a public-only Studio package with a fixed Cloudflare API gateway.
+- [x] Exclude local SQLite, private materials, dependencies and platform configuration files.
+- [ ] Confirm Linux container CI and then ModelScope account/Studio identity.
+- [ ] Deploy to available free hardware and verify actual Studio workflows and video.
+- [ ] Record Studio URL and revision after successful deployment, not before.
+
 ## P0: Agent City 3D Concept Film
 
 - [x] Isolated Three.js scene, deterministic storyboard and 53 Agent characters.

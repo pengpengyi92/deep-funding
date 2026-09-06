@@ -6,6 +6,10 @@ Open-source, evidence-aware Agent-to-Agent funding matchmaking. Two top-level ag
 
 ## V0.3.0: Persistent Database + Two RAG Graphs
 
+**ModelScope deployment candidate:** [hybrid public Studio package](mota/studio/README.md)
+and [current deployment status / historical-document corrections](mota/DEPLOYMENT_STATUS_2026-09-06.md).
+ModelScope login and a verified Studio are still required; this is not yet a live Studio.
+
 **3D product-concept film:** [Agent City source, preview and MP4 export](video/deepfunding-demo/README.md).
 
 Watch the [28-second 1080p film online](https://pengyi-deep-funding.pengpengyi92.workers.dev/watch.html).

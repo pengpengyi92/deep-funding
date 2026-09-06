@@ -10,7 +10,7 @@ const assets = {
         ETag: '"v1"',
       },
     }),
-} as Fetcher;
+};
 const get = (range?: string, method = "GET", ifRange?: string) =>
   serveFilm(
     new Request("https://example.test/film/deepfunding-demo-v1.mp4", {
@@ -69,7 +69,7 @@ describe("published film byte ranges", () => {
   it("uses the asset manifest when the binding omits Content-Length", async () => {
     const withoutSize = {
       fetch: async () => new Response("0123456789"),
-    } as Fetcher;
+    };
     const response = await serveFilm(
       new Request("https://example.test/film", {
         headers: { Range: "bytes=7-9" },
