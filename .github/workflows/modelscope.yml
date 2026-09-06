@@ -1,0 +1,26 @@
+name: ModelScope package
+on:
+  push:
+    paths: ["mota/studio/**", "scripts/package-modelscope.mjs", ".github/workflows/modelscope.yml"]
+  pull_request:
+    paths: ["mota/studio/**", "scripts/package-modelscope.mjs", ".github/workflows/modelscope.yml"]
+permissions:
+  contents: read
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/package-modelscope.mjs
+      - run: docker build -t deepfunding-studio .local/modelscope-studio-package
+      - run: docker run -d --name deepfunding-studio -p 7860:7860 -e STUDIO_PUBLIC_ORIGIN=http://localhost:7860 deepfunding-studio
+      - run: sh mota/studio/smoke.sh
+      - if: always()
+        run: docker logs deepfunding-studio

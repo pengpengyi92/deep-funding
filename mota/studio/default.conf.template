@@ -1,0 +1,58 @@
+map $http_origin $studio_origin_allowed {
+    default 0;
+    "${STUDIO_PUBLIC_ORIGIN}" 1;
+}
+map $request_method $is_mutation {
+    default 1;
+    GET 0;
+    HEAD 0;
+}
+map "$is_mutation:$studio_origin_allowed" $reject_origin {
+    default 0;
+    "1:0" 1;
+}
+map $http_cookie $demo_cookie {
+    default "";
+    "~(?:^|;\s*)df_session=([a-f0-9]{64})(?:;|$)" "df_session=$1";
+}
+server {
+    listen 7860;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+    charset utf-8;
+    client_max_body_size 32k;
+    client_body_timeout 15s;
+    access_log off;
+    add_header X-Content-Type-Options nosniff always;
+    add_header Referrer-Policy no-referrer always;
+    location = /healthz {
+        default_type application/json;
+        return 200 '{"status":"ok","mode":"public-demo-gateway","private_database":false}';
+    }
+    location ^~ /api/ {
+        if ($reject_origin) { return 403; }
+        proxy_pass https://pengyi-deep-funding.pengpengyi92.workers.dev;
+        proxy_ssl_server_name on;
+        proxy_ssl_name pengyi-deep-funding.pengpengyi92.workers.dev;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_pass_request_headers off;
+        proxy_set_header Host pengyi-deep-funding.pengpengyi92.workers.dev;
+        proxy_set_header Origin https://pengyi-deep-funding.pengpengyi92.workers.dev;
+        proxy_set_header Content-Type $http_content_type;
+        proxy_set_header Accept application/json;
+        proxy_set_header Cookie $demo_cookie;
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_send_timeout 30s;
+        proxy_redirect off;
+        add_header Cache-Control no-store always;
+        add_header X-Content-Type-Options nosniff always;
+        add_header Referrer-Policy no-referrer always;
+    }
+    location ~ /\. { deny all; }
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

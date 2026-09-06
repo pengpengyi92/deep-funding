@@ -341,6 +341,9 @@ function Landing() {
           <BusyButton className="text-button" onClick={demoRun}>
             <Play size={15} /> Run the A2A demo <ArrowRight size={16} />
           </BusyButton>
+          <a className="text-button" href="/watch.html">
+            <Play size={15} /> Watch the 3D film <ArrowRight size={16} />
+          </a>
         </div>
         <span className="hero-caption">
           THE RIGHT CONVERSATION STARTS WITH THE RIGHT FIT.

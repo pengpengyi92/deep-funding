@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-06T05:17:55.178Z",
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "frames": 840,
+    "duration_seconds": 28,
+    "pixel_format": "yuv420p"
+  },
+  "audio": {
+    "codec": "aac",
+    "channels": 2,
+    "sample_rate": "48000",
+    "duration_seconds": 28
+  },
+  "bytes": 27240989,
+  "sha256": "9e9862bad1ba32cd7f59c869743818813701aa76d31389a6557789a114c5e5e0",
+  "full_decode": "PASS",
+  "encoded_storyboard_frames": 8
+}

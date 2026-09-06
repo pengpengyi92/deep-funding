@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DeepFunding Agent City: a 28-second 3D product concept film."
+    />
+    <title>DeepFunding | Agent City Film</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        letter-spacing: 0;
+      }
+      body {
+        margin: 0;
+        background: #f0f5f4;
+        color: #143a44;
+        font:
+          16px Arial,
+          sans-serif;
+      }
+      header,
+      main {
+        max-width: 1600px;
+        margin: auto;
+      }
+      header {
+        padding: 24px 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      h1 {
+        margin: 8px 0;
+        font-size: 25px;
+      }
+      header span {
+        font-size: 14px;
+        color: #587477;
+      }
+      video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: contain;
+        background: #0b252e;
+      }
+      footer {
+        padding: 20px 28px;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      footer p {
+        flex: 1;
+        min-width: 220px;
+        margin: 0;
+        color: #587477;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      a {
+        color: #087f8d;
+        font-size: 14px;
+      }
+      a:focus-visible {
+        outline: 3px solid #087f8d;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">Deep Funding home</a>
+        <h1>Agent City</h1>
+      </div>
+      <span>28 seconds / 1080p / 30 fps / Stereo</span>
+    </header>
+    <main>
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="/film/poster.png"
+        aria-label="DeepFunding 3D concept film with original soundtrack"
+      >
+        <source src="/film/deepfunding-demo-v1.mp4" type="video/mp4" />
+        Your browser does not support video.
+        <a href="/film/deepfunding-demo-v1.mp4">Download the MP4</a>.
+      </video>
+      <footer>
+        <p>
+          Product concept. Synthetic profiles and illustrative scores. Human
+          review before any introduction. Music only; the film contains no
+          spoken dialogue.
+        </p>
+        <a href="/film/deepfunding-demo-v1.mp4" download>Download MP4</a>
+      </footer>
+    </main>
+  </body>
+</html>

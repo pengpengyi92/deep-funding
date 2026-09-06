@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-06T05:34:00.430Z",
+  "browser": "Chrome",
+  "metadata": {
+    "duration": 28,
+    "width": 1920,
+    "height": 1080,
+    "codec": "probably"
+  },
+  "playback": true,
+  "seek": true,
+  "frame_variance": 3271.15623794368,
+  "mobile_no_overflow": true
+}

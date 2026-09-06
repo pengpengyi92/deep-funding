@@ -1,0 +1,6 @@
+**
+!Dockerfile
+!default.conf.template
+!15-validate-origin.sh
+!site/
+!site/**

@@ -1,0 +1,18 @@
+{
+  "artifact": "deepfunding-demo.mp4",
+  "created_at": "2026-09-06T05:15:45.751Z",
+  "duration_seconds": 28,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "frames": 840,
+  "bytes": 27240989,
+  "sha256": "9e9862bad1ba32cd7f59c869743818813701aa76d31389a6557789a114c5e5e0",
+  "render_wall_seconds": 424.142,
+  "method": "Deterministic Three.js frames -> Playwright JPEG97 -> FFmpeg H.264 CRF17 + original PCM synthesis -> AAC192",
+  "browser_errors": [],
+  "pre_master_sha256": "d83324571b43d913422e3f5241a96e9eaf367c14afc55b6107c6ae701af2d180",
+  "pre_master_bytes": 30819950,
+  "mastered_at": "2026-09-06T05:17:26.898Z",
+  "mastering": "BT.601 full range -> BT.709 limited range H.264 CRF17; original PCM -> loudnorm I-20 LRA9 TP-2 -> AAC192 / 48kHz"
+}
