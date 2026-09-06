@@ -1,5 +1,31 @@
 # Benchmark Card: Deep Funding
 
+## V0.3 Persistence and Knowledge Baseline
+
+**Baseline:** V0.2's existing Worker/D1 sandbox and local RSI services remain unchanged.
+They do not provide the V0.3 Python private-profile schema or source-linked RAG trees.
+Falsifiable question: do new private records survive an immediate process restart,
+and do two knowledge sources feed auditable matches without upgrading allegations
+to facts or publishing private data?
+
+**Change:** FastAPI/SQLAlchemy/SQLite, twelve tables, source-linked metadata retrieval,
+persisted match snapshots, evidence labels and separate public/private routes.
+
+**Measure:** 19 Python tests including a real Uvicorn stop/start, 116 TypeScript
+regressions, twelve public/legacy and five private browser groups. Fixed synthetic seeded pair,
+five warmups then 25 timed database transactions including commit.
+
+**Result:** Local tests pass. Median 5.9397 ms, p95 6.6422 ms; no HTTP/browser/network.
+Raw [measurement](docs/benchmarks/v0.3-database.json). Runtime model calls/tokens: 0.
+Development tokens, real fundraising accuracy and model comparisons: UNMEASURED.
+
+**Trade-off:** Metadata/keyword baseline, limited source scope, many unknown current
+mandates, no calibrated quality/risk score. Local single-owner privacy boundary is
+not hosted authentication. The timing is not evidence of superiority over V0.2.
+
+**Next Action:** Publish verified build, then establish independently labelled
+retrieval cases and licensed institution/program offers before ranking optimization.
+
 ## RSI V0.2 Baseline -> Change -> Measure -> Result -> Trade-off -> Next Action
 
 **Baseline:** Fixed normalization bounds, equal feature weights, eight synthetic historical entries. **Change:** Explicit user-configured feature weights, missing-data coverage, cohort selection, immutable snapshots and mandate-gated Founder RSI. Falsifiable question: do GUI/CLI/TUI preserve the same scores and veto/temporal rules without data upload?

@@ -2,7 +2,58 @@
 
 **Companies want the right capital. Capital wants the right company. Let their agents meet first.**
 
-Open-source, evidence-aware Agent-to-Agent funding matchmaking. Two top-level agents, eight scoped sub-agents, one inspectable match protocol. A runnable **fictional-data sandbox**, not an investor directory, investment recommendation or autonomous dealmaker.
+Open-source, evidence-aware Agent-to-Agent funding matchmaking. Two top-level agents, eight scoped sub-agents, one inspectable match protocol. A runnable **fictional-data sandbox**, local private research database and sourced public knowledge library. Not an investment recommendation or autonomous dealmaker.
+
+## V0.3.0: Persistent Database + Two RAG Graphs
+
+- **SQLite / SQLAlchemy / FastAPI**: twelve models, company and funding-provider forms, funding preferences/needs, saved matches, four-stage Agent run history, audits and lightweight subscription records.
+- **Funding RAG Graph**: 18 sourced institution/program seeds, classification nodes and templates. Verify current eligibility separately; unknown tickets and terms stay unknown.
+- **Compliance RAG Graph**: sourced references and evidence-request templates, with allegations, responses and findings kept separate. No blacklist or guilt by association.
+- **Data Explorer**: tables, detail JSON, counts, search, sorting, filters and persistent forms.
+- **Knowledge Explorer**: [Funding](https://pengyi-deep-funding.pengpengyi92.workers.dev/knowledge/funding) and [Compliance](https://pengyi-deep-funding.pengpengyi92.workers.dev/knowledge/compliance).
+
+Cloudflare serves public knowledge and the existing fictional D1 demo. **The new private SQLite database runs locally**, not on Cloudflare. The public [Database page](https://pengyi-deep-funding.pengpengyi92.workers.dev/data-explorer) links to that local workspace. Hosted private authentication and cross-device database sync are not implemented.
+
+### Private Database V0.3
+
+Python 3.11+, Node 24. No model key required. Windows PowerShell:
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+npm.cmd ci
+.\.venv\Scripts\python.exe scripts/build_knowledge.py --check
+npm.cmd run build
+.\.venv\Scripts\python.exe scripts/seed_database.py
+.\.venv\Scripts\python.exe scripts/serve_database.py
+```
+
+macOS/Linux: create and activate a virtual environment with python3, then use
+python instead of the Windows executable and npm instead of npm.cmd.
+
+Open http://127.0.0.1:8793/data-explorer. Swagger: /docs; ReDoc: /redoc.
+Default file: data/deep_funding.db, ignored by Git. The seed is idempotent and
+synthetic: three founders/companies, ten fictional providers and persisted matches.
+No real investor mandate is inferred from a public source record.
+
+Use the Users / Founders / Companies / Funding providers / Funding needs tables
+to add profiles. Generate match persists the result, four Agent runs and an audit.
+The engine is deterministic rules-v0.3.0 with source-linked retrieval, not an LLM
+or a learned ranker. Scoring reports known-dimension coverage, not funding probability.
+
+The service is **single-owner loopback-only**; do not expose it through a tunnel.
+Close the service before making a protected backup of the database. Do not commit
+the database or private exports. Existing Worker/D1 and RSI stores remain separate.
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest backend/tests -q
+.\.venv\Scripts\python.exe scripts/benchmark_database.py
+$env:PYTHON_BIN=(Resolve-Path .venv/Scripts/python.exe).Path
+npm.cmd run test:database-ui
+```
+
+Details: [architecture / security](docs/V0.3_ARCHITECTURE.md),
+[V0.3 acceptance](docs/RELEASE_V0.3.md), [changelog](CHANGELOG.md).
 
 ## V0.2: RSI + Capital / Resources
 

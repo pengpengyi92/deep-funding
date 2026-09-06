@@ -33,6 +33,7 @@ import {
 import { fundingProfileShape } from "../../packages/knowledge/profile-schema";
 import { catalogueFunder } from "../../packages/knowledge/adapter";
 import { taxonomyCompanies } from "../../data/taxonomy-demo";
+import { searchKnowledge } from "../../packages/knowledge/public-graph";
 
 class HttpError extends Error {
   constructor(
@@ -199,11 +200,33 @@ async function api(request: Request, env: Env): Promise<Response> {
   if (path === "/api/health" && method === "GET")
     return json({
       status: "ok",
-      version: "0.2.0",
+      version: "0.3.0",
       engineVersion: ENGINE_VERSION,
       engine: "deterministic",
       outboundIntroductions: false,
     });
+  if (path === "/api/v3/health" && method === "GET")
+    return json({
+      version: "0.3.0",
+      mode: "public-knowledge",
+      persistent: false,
+      localWorkspace: "http://127.0.0.1:8793/data-explorer",
+    });
+  if (path.startsWith("/api/v3/"))
+    return json(
+      {
+        detail:
+          "Private SQLite database runs on your local machine only. No private records are hosted here.",
+      },
+      503,
+    );
+  if (
+    method === "GET" &&
+    ["/api/knowledge/funding", "/api/knowledge/compliance"].includes(path)
+  ) {
+    const records = searchKnowledge(path.split("/").pop()!, url.searchParams);
+    return json({ records, total: records.length, version: "0.3.0" });
+  }
   if (!["GET", "POST", "PUT", "DELETE"].includes(method))
     throw new HttpError(405, "Method not allowed.");
   if (method !== "GET") checkOrigin(request);

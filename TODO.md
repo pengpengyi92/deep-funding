@@ -1,5 +1,25 @@
 # TODO
 
+## P0: Database and RAG Graphs V0.3
+
+- [x] Twelve SQLAlchemy models and local SQLite initialization, with nullable financials.
+- [x] FastAPI create/read/update contracts, linked-record integrity and OpenAPI docs.
+- [x] Company/provider forms and database explorer: table/detail/search/filter/sort/count.
+- [x] Saved A2A results, four Agent stages, snapshots, audit trail and stale-input detection.
+- [x] Synthetic seed, public Funding/Compliance note trees and validated public index.
+- [x] Evidence-labelled disputed case with company response; no association-based penalty.
+- [x] Real process restart, form refresh and local-only privacy tests.
+- [ ] Final V0.3 GitHub CI, production deployment and public-route verification.
+- [ ] Ten-slide PPPT covering functionality, version evolution and verified boundaries.
+
+## P1: V0.3 Follow-up Gates
+
+- [ ] Hosted authentication, tenant isolation and secure private sync before remote private DB access.
+- [ ] Versioned migrations and tested backup/restore before production multi-user use.
+- [ ] Human-verified program-specific offers, eligibility dates, conflict resolution and refresh ownership.
+- [ ] Calibrated quality/financial/risk dimensions before applying stored preference weights.
+- [ ] Explicit reviewed import adapters across V0.2 RSI / D1 and V0.3 SQL models.
+
 ## P0: Combined RSI Major Update V0.2
 
 - [x] Shared TypeScript RSI services, schemas, versioned benchmark and temporal/missing-data guards.
