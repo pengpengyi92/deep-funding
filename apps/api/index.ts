@@ -1,4 +1,6 @@
 import { z } from "zod";
+import { serveFilm } from "./film";
+import filmManifest from "../web/public/film/manifest.json";
 import {
   companySchema,
   funderSchema,
@@ -632,6 +634,8 @@ async function api(request: Request, env: Env): Promise<Response> {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    if (new URL(request.url).pathname === "/film/deepfunding-demo-v1.mp4")
+      return serveFilm(request, env.ASSETS, filmManifest.bytes);
     if (!new URL(request.url).pathname.startsWith("/api/"))
       return env.ASSETS.fetch(request);
     try {

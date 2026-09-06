@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>DeepFunding | Agent City Film</title>
+  </head>
+  <body>
+    <main id="film" aria-label="DeepFunding 3D concept film">
+      <canvas
+        id="world"
+        aria-label="Animated three-dimensional funding city"
+      ></canvas>
+      <div id="titles">
+        <header>
+          <div class="brand">
+            <b class="brand-mark">DF</b><strong>DeepFunding</strong>
+          </div>
+          <div class="edition">AGENT CITY <span>/</span> CONCEPT FILM 01</div>
+        </header>
+        <div id="shot-label"></div>
+        <section id="narrative">
+          <div class="kicker" id="kicker"></div>
+          <h1 id="headline"></h1>
+          <p id="subline"></p>
+        </section>
+        <aside id="profile" class="info-panel">
+          <div class="panel-kicker">COMPANY PROFILE / SYNTHETIC</div>
+          <h2>AI Startup Agent</h2>
+          <dl>
+            <div>
+              <dt>Sector</dt>
+              <dd>Enterprise AI</dd>
+            </div>
+            <div>
+              <dt>Stage</dt>
+              <dd>Seed</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Shenzhen</dd>
+            </div>
+            <div>
+              <dt>Capital need</dt>
+              <dd>CNY 10M</dd>
+            </div>
+          </dl>
+          <div class="profile-foot">Structured profile, not a cold pitch.</div>
+        </aside>
+        <aside id="matches" class="info-panel">
+          <div class="panel-kicker">
+            ILLUSTRATIVE RANKING / NOT PROBABILITIES
+          </div>
+          <h2>Three paths forward.</h2>
+          <div class="match-row">
+            <b>01</b
+            ><span>Venture capital<small>Sector + stage fit</small></span
+            ><strong>92<em>/100</em></strong>
+          </div>
+          <div class="match-row">
+            <b>02</b><span>Industrial fund<small>Strategic fit</small></span
+            ><strong>86<em>/100</em></strong>
+          </div>
+          <div class="match-row">
+            <b>03</b><span>Bank<small>Credit eligibility pending</small></span
+            ><strong>74<em>/100</em></strong>
+          </div>
+          <div id="human-gate">Human review before introduction</div>
+        </aside>
+        <div id="dialogue">
+          <p><span>COMPANY</span> Looking for seed funding.</p>
+          <p><span>FUNDING</span> Let's review the evidence.</p>
+          <b>INTRODUCTION CANDIDATE</b>
+        </div>
+        <section id="ending">
+          <p>COMPANY AGENTS <span>+</span> FUNDING AGENTS</p>
+          <h2>DeepFunding</h2>
+          <h3>Agent-to-Agent Funding Infrastructure</h3>
+          <div>Discover. Match. Connect. Fund.</div>
+        </section>
+        <footer>
+          <span>QIANHAI-INSPIRED / NOT A REAL MAP</span
+          ><span id="disclaimer">PRODUCT CONCEPT / SYNTHETIC AGENTS</span
+          ><span id="timecode">00:00 / 00:28</span>
+        </footer>
+        <div id="progress"></div>
+        <div id="fade"></div>
+      </div>
+    </main>
+    <nav id="controls" aria-label="Video preview controls">
+      <button id="play" title="Pause" aria-label="Pause">&#x23F8;</button
+      ><button id="restart" title="Restart" aria-label="Restart">
+        &#x21BA;</button
+      ><input
+        id="scrub"
+        type="range"
+        min="0"
+        max="27.999"
+        step="0.033333"
+        value="0"
+        aria-label="Video position"
+      /><output id="preview-time">0.0 / 28.0s</output>
+    </nav>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepFunding | Agent City Film</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        letter-spacing: 0;
+      }
+      body {
+        margin: 0;
+        background: #f0f5f4;
+        color: #143a44;
+        font:
+          16px Arial,
+          sans-serif;
+      }
+      header {
+        max-width: 1600px;
+        margin: auto;
+        padding: 25px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      h1 {
+        margin: 0;
+        font-size: 25px;
+      }
+      header span {
+        color: #587477;
+        font-size: 14px;
+      }
+      main {
+        max-width: 1600px;
+        margin: auto;
+      }
+      video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: contain;
+        background: #0b252e;
+      }
+      footer {
+        padding: 20px 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: center;
+      }
+      footer p {
+        flex: 1;
+        color: #587477;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        min-width: 220px;
+      }
+      a {
+        color: #087f8d;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DeepFunding / Agent City</h1>
+      <span>28 seconds / 1080p / 30 fps / Stereo</span>
+    </header>
+    <main>
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="output/shot-01.png"
+        aria-label="DeepFunding 3D concept film with original soundtrack"
+      >
+        <source src="output/deepfunding-demo.mp4" type="video/mp4" />
+      </video>
+      <footer>
+        <p>
+          Product concept. Synthetic profiles and illustrative scores. Human
+          review before any introduction.
+        </p>
+        <a href="output/deepfunding-demo.mp4" download>Download MP4</a
+        ><a href="index.html">3D preview</a>
+      </footer>
+    </main>
+  </body>
+</html>

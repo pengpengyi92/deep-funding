@@ -1,0 +1,33 @@
+name: Agent City Film
+on:
+  push:
+    paths: ['video/deepfunding-demo/**', '.github/workflows/film.yml']
+  pull_request:
+    paths: ['video/deepfunding-demo/**', '.github/workflows/film.yml']
+permissions:
+  contents: read
+jobs:
+  verify-film:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: video/deepfunding-demo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: video/deepfunding-demo/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - run: npm run build
+      - run: npm run stills
+      - run: npm run verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agent-city-storyboard
+          path: video/deepfunding-demo/output/

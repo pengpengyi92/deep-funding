@@ -1,5 +1,14 @@
 # TODO
 
+## P0: Agent City 3D Concept Film
+
+- [x] Isolated Three.js scene, deterministic storyboard and 53 Agent characters.
+- [x] Building cutaways, bidirectional paths, fan-out matching and human-review labels.
+- [x] Preview controls, original audio synthesis and H.264/AAC exporter.
+- [x] Unit, eight-scene canvas and mobile-control preflight.
+- [x] Complete final 28-second encoding and archive artifact verification.
+- [x] Cloudflare watch page, home entry, optimized MP4 and tested streaming byte ranges.
+
 ## P0: Database and RAG Graphs V0.3
 
 - [x] Twelve SQLAlchemy models and local SQLite initialization, with nullable financials.

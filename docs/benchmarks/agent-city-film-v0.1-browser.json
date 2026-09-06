@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-09-06T05:08:22.680Z",
+  "checks": [
+    {
+      "time": 1.8,
+      "mean": 204.26636445473991,
+      "variance": 1129.5497204154817,
+      "camera": {
+        "position": [
+          -31.02325,
+          25.598,
+          39.598
+        ],
+        "target": [
+          0,
+          2.42525,
+          -2.1494999999999997
+        ],
+        "fov": 43
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.9,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        -11.6,
+        0.62,
+        1
+      ],
+      "drawCalls": 701,
+      "triangles": 95534,
+      "selectedLinks": 0,
+      "shot": "01 / THE CITY",
+      "state": "IDLE"
+    },
+    {
+      "time": 5.5,
+      "mean": 202.90123456791025,
+      "variance": 1248.5454901582561,
+      "camera": {
+        "position": [
+          -25.81924198250729,
+          19.425655976676385,
+          33.42565597667638
+        ],
+        "target": [
+          0,
+          3,
+          -0.6064139941690962
+        ],
+        "fov": 43
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.9,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        -11.6,
+        0.62,
+        1
+      ],
+      "drawCalls": 797,
+      "triangles": 105902,
+      "selectedLinks": 0,
+      "shot": "02 / TWO SIDES, ONE NETWORK",
+      "state": "IDLE"
+    },
+    {
+      "time": 9.5,
+      "mean": 198.76747363684424,
+      "variance": 1450.1037086242432,
+      "camera": {
+        "position": [
+          -22.792,
+          12.688,
+          21.688
+        ],
+        "target": [
+          -10,
+          2.9584,
+          0.10400000000000002
+        ],
+        "fov": 44
+      },
+      "companyOpacity": 0.12,
+      "fundingOpacity": 0.9,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        -11.6,
+        0.62,
+        1
+      ],
+      "drawCalls": 798,
+      "triangles": 105864,
+      "selectedLinks": 0,
+      "shot": "03 / INSIDE THE COMPANY HUB",
+      "state": "IDLE"
+    },
+    {
+      "time": 14.5,
+      "mean": 199.03194122942404,
+      "variance": 1131.051314935532,
+      "camera": {
+        "position": [
+          -4.73469387755102,
+          8.393586005830905,
+          19.78717201166181
+        ],
+        "target": [
+          -1.6705539358600587,
+          1.8787172011661808,
+          2.6064139941690962
+        ],
+        "fov": 46
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.9,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        0.5179006578503831,
+        0.62,
+        4.8
+      ],
+      "drawCalls": 798,
+      "triangles": 105904,
+      "selectedLinks": 0,
+      "shot": "04 / THE A2A JOURNEY",
+      "state": "WALKING"
+    },
+    {
+      "time": 18.8,
+      "mean": 196.14321309156512,
+      "variance": 1585.5713592257962,
+      "camera": {
+        "position": [
+          22.648,
+          13.296,
+          24.352
+        ],
+        "target": [
+          10,
+          2.824,
+          0
+        ],
+        "fov": 44
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.12,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        10,
+        0.62,
+        1.4
+      ],
+      "drawCalls": 821,
+      "triangles": 113670,
+      "selectedLinks": 18,
+      "shot": "05 / DISCOVER THE NETWORK",
+      "state": "SEARCHING"
+    },
+    {
+      "time": 21.1,
+      "mean": 197.3781346450618,
+      "variance": 1561.8426805592098,
+      "camera": {
+        "position": [
+          22,
+          12.246285365357217,
+          25.492570730714434
+        ],
+        "target": [
+          9.753714634642783,
+          2.5246285365357215,
+          0
+        ],
+        "fov": 44
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.12,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        10,
+        0.62,
+        1.4
+      ],
+      "drawCalls": 821,
+      "triangles": 113690,
+      "selectedLinks": 3,
+      "shot": "06 / MATCH, THEN REVIEW",
+      "state": "MATCHING"
+    },
+    {
+      "time": 23,
+      "mean": 198.41372492284137,
+      "variance": 1522.6115230906726,
+      "camera": {
+        "position": [
+          22,
+          12.961734174638714,
+          26.923468349277428
+        ],
+        "target": [
+          9.038265825361286,
+          2.5961734174638713,
+          0
+        ],
+        "fov": 44
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.12,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        11.4,
+        0.62,
+        0.8
+      ],
+      "drawCalls": 821,
+      "triangles": 113690,
+      "selectedLinks": 3,
+      "shot": "06 / MATCH, THEN REVIEW",
+      "state": "TALKING"
+    },
+    {
+      "time": 26.6,
+      "mean": 202.7751896862113,
+      "variance": 1169.473974858185,
+      "camera": {
+        "position": [
+          29.432000000000002,
+          24.216,
+          39.864000000000004
+        ],
+        "target": [
+          0,
+          2.5,
+          -2
+        ],
+        "fov": 43
+      },
+      "companyOpacity": 0.9,
+      "fundingOpacity": 0.9,
+      "agentCount": 53,
+      "flowDirections": [
+        1,
+        -1
+      ],
+      "startup": [
+        11.4,
+        0.62,
+        0.8
+      ],
+      "drawCalls": 804,
+      "triangles": 108926,
+      "selectedLinks": 0,
+      "shot": "07 / AN AGENT-TO-AGENT CITY",
+      "state": "CONNECTED"
+    }
+  ],
+  "desktop_canvas_nonblank": true,
+  "motion": true,
+  "mobile_aspect_ratio": true,
+  "no_horizontal_overflow": true,
+  "play_pause_seek_restart": true,
+  "browser_errors": []
+}

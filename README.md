@@ -6,6 +6,13 @@ Open-source, evidence-aware Agent-to-Agent funding matchmaking. Two top-level ag
 
 ## V0.3.0: Persistent Database + Two RAG Graphs
 
+**3D product-concept film:** [Agent City source, preview and MP4 export](video/deepfunding-demo/README.md).
+
+Watch the [28-second 1080p film online](https://pengyi-deep-funding.pengpengyi92.workers.dev/watch.html).
+The web master is versioned under `apps/web/public/film/`; the original master remains local.
+28 seconds, two transparent hubs, bidirectional Agent flow and a synthetic A2A shortlist.
+This illustrates the vision; it is not evidence of real outreach or funding outcomes.
+
 - **SQLite / SQLAlchemy / FastAPI**: twelve models, company and funding-provider forms, funding preferences/needs, saved matches, four-stage Agent run history, audits and lightweight subscription records.
 - **Funding RAG Graph**: 18 sourced institution/program seeds, classification nodes and templates. Verify current eligibility separately; unknown tickets and terms stay unknown.
 - **Compliance RAG Graph**: sourced references and evidence-request templates, with allegations, responses and findings kept separate. No blacklist or guilt by association.
